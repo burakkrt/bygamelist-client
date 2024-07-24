@@ -1,0 +1,30 @@
+.theme-switch {
+  $width: 32px;
+  $icon-size: 20px;
+  position: relative;
+  overflow: hidden;
+  width: $width;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 3px var(--gl-box-shadow);
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .theme-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    transition: all 140ms ease-in-out;
+    height: 100%;
+
+    .base-icon {
+      font-size: $icon-size;
+      padding: calc(($width - $icon-size) / 2);
+      color: white;
+    }
+  }
+
+  &.dark .theme-icons {
+    transform: translateX(-32px);
+  }
+}

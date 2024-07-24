@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+:root {
+  @include define-theme-variables(light);
+}
+
+[data-theme='dark'] {
+  @include define-theme-variables(dark);
+}
+
+body {
+  font-family: var(--font-roboto);
+  color: var(--gl-text);
+  background-color: var(--gl-background);
+}
