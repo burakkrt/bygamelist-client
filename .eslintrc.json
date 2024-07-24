@@ -41,6 +41,10 @@
     "no-unused-vars": "warn",
     "react/react-in-jsx-scope": "off", // React 18'de gereksiz,
     // boş obje propsu göderebilme aktif
-    "no-empty-pattern": ["error", { "allowObjectPatternsAsParameters": true }]
+    "no-empty-pattern": ["error", { "allowObjectPatternsAsParameters": true }],
+    // ...spread error kapat
+    "react/jsx-props-no-spreading": "off",
+    // Typescript any kullanım error kapat
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

@@ -3,7 +3,7 @@ import NextImage from 'next/image'
 import classNames from 'classnames'
 import { IImageOptions, IImageProps } from './types'
 
-async function Image({
+function Image({
   src,
   alt,
   loading = 'eager',
@@ -15,6 +15,7 @@ async function Image({
   const imageOptions: IImageOptions = {
     src,
     alt,
+    loading,
   }
 
   if (width && height) {
@@ -27,29 +28,6 @@ async function Image({
 
   if (priority) {
     imageOptions.priority = priority
-    imageOptions.loading = 'eager'
-  }
-
-  if (loading === 'lazy' && !priority) {
-    if (src.startsWith('http')) {
-      let imageBlur: string = ''
-      try {
-        imageBlur = await fetch(src).then(async (res) => {
-          return Buffer.from(await res.arrayBuffer()).toString('base64')
-        })
-      } catch (error) {
-        console.log('Base image placeholder blur', error)
-      }
-
-      if (imageBlur) {
-        imageOptions.blurDataURL = `data:image/png;base64,${imageBlur}`
-        imageOptions.placeholder = 'blur'
-      }
-    } else {
-      imageOptions.blurDataURL = src
-      imageOptions.placeholder = 'blur'
-    }
-    imageOptions.loading = loading
   }
 
   return (
