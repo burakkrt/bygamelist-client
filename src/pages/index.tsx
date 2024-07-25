@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Container from '@/components/base/container'
-import Icon from '@/components/base/icon'
-import Image from '@/components/base/image'
+import Metin2ServerList from '@/components/metin2-server-list'
 
 export default function Home() {
   return (
@@ -12,115 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container size="extended">
-        <div>
-          <h1 style={{ fontSize: '48px', fontWeight: 800 }}>Metin2 Pvp Serverler</h1>
-          <h2 style={{ fontSize: '36px', fontWeight: 600 }}>Metin2 Pvp Serverler</h2>
-          <h3 style={{ fontSize: '28px', fontWeight: 400 }}>Metin2 Pvp Serverler</h3>
-          <h4 style={{ fontSize: '22px', fontWeight: 300 }}>Metin2 Pvp Serverler</h4>
-          <Icon name="icon-search" />
-          <Image
-            src="https://picsum.photos/id/21/200/300"
-            alt="test"
-            width={300}
-            height={400}
-            loading="lazy"
-            objectFit="cover"
-          />
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(8,1fr)',
-              margin: '48px 0',
-              gap: '12px',
-            }}
-          >
-            <Image
-              src="https://picsum.photos/id/11/200/300"
-              alt="test"
-              objectFit="cover"
-            />
-            <Image
-              src="https://picsum.photos/id/21/200/300"
-              alt="test"
-              width={200}
-              height={600}
-              objectFit="cover"
-            />
-            <Image
-              src="https://picsum.photos/id/31/200/300"
-              alt="test"
-              width={200}
-              height={300}
-              loading="lazy"
-            />
-            <Image
-              src="https://picsum.photos/id/41/200/300"
-              alt="test"
-              width={200}
-              height={300}
-              loading="lazy"
-            />
-            <Image
-              src="https://picsum.photos/id/51/200/300"
-              alt="test"
-              width={200}
-              height={300}
-              loading="lazy"
-            />
-            <Image
-              src="https://picsum.photos/id/61/200/300"
-              alt="test"
-              width={200}
-              height={300}
-              loading="lazy"
-            />
-            <Image
-              src="https://picsum.photos/id/71/200/300"
-              alt="test"
-              width={200}
-              height={300}
-              loading="lazy"
-            />
-            <Image
-              src="https://picsum.photos/id/81/200/300"
-              alt="test"
-              width={200}
-              height={300}
-              loading="lazy"
-            />
-          </div>
-          <p style={{ color: 'var(--gl-subtitle)' }}>
-            1957'de Yeşil Sahne'de amatör olarak Ferdi Merter ve Erdinç Üstün'le birlikte
-            tiyatro çalıştı ancak oyun sahnelenmediği için sahneye çıkmadı. 1962-1965
-            arasında Millî Türk Talebe Birliğinde tiyatro bölümü yöneticisi oldu, çeşitli
-            oyunlarda oynadı.[3] Uzun yıllar sahne arkadaşı olacak Zeki Alasya ile orada
-            tanıştı. 1964 yılında Ulvi Uraz tiyatrosunda "Gözlerimi Kaparım Vazifemi
-            Yaparım" oyunu ile profesyonel olarak oyunculuğa başladı. 1966 yılında Gen-Ar
-            Tiyatrosunda çalıştı. 1967 yılında Türkiye'nin ilk kabare tiyatrosu olan
-            Devekuşu Kabare Tiyatrosunun kurucuları arasında yer aldı.[4] Devekuşu
-            Kabare’nin ilk oyunu Vatan Kurtaran Şaban'daki Şaban rolü ile tanındı. 1978'de
-            Ahmet Gülhan ve Haldun Taner'in ayrılmasından itibaren 1992 yılında kapanana
-            kadar tiyatronun idari müdürlüğünü Metin Akpınar yaptı. 1980'lerde Devekuşu
-            Kabare'de Zeki Alasya ile birlikte kendilerine özgü bir üslup geliştirdikleri,
-            büyük salonlarda sahneledikleri oyunlar sahneledi. Sinemaya, Ertem Eğilmez'in
-            yönettiği Tatlı Dillim filmi ile başladı. Mirasyediler (1974) filminden
-            itibaren Zeki-Metin ikilisi olarak Zeki Alasya ile birlikte oynadığı toplumsal
-            içerikli komedi filmleri çevirdi. İkili, 1990'arın başında birlikte
-            Zeki-Metince adlı dizide rol aldı. Akpınar, 1999 yılında Sinan Çetin'in
-            yönettiği Propaganda filminde Rahim rolünü canlandırdı ve kariyerine tek
-            başına devam etme kararını açıkladı.[5] 2008 yılında İsmail Dümbüllü Ödülleri
-            “Yaşam Boyu Onur Ödülü”ne, 2010 Altın Portakal Film Festivali “Yaşam Boyu Onur
-            Ödülü”ne ve 2011 Uluslararası İstanbul Film Festivali “Onur Ödülü”ne layık
-            görüldü. Haliç ve Okan üniversiteleri konservatuvarlarında "Tiyatroda Kabare
-            Tarihi" dersleri verdi. 2020 yılında Metin Akpınar'ın hayatını konu alan "İyi
-            ki Yapmışım" belgeseli 39. İstanbul Film Festivali'nin kapanışında
-            gösterildi.[6][7] 2022 yılında, hayatını konu alan, özel albümünden
-            fotoğrafları da içeren “Sahneye Adanmış Bir Ömür: Metin Akpınar” adlı bir
-            kitap yayımlandı.[8]
-          </p>
-        </div>
-      </Container>
+      <Metin2ServerList />
     </>
   )
 }

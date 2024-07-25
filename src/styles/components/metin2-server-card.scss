@@ -1,0 +1,72 @@
+.metin2-server-card {
+  position: relative;
+  width: 1024px;
+  height: 150px;
+
+  .card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 0;
+    color: white;
+
+    & > div {
+      position: relative;
+      padding: 0 24px;
+
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        transform: translateY(-50%);
+        right: 0;
+        top: 50%;
+        width: 1px;
+        height: 46px;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    .level-status {
+      min-width: 174px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .level {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 42px;
+      }
+
+      .type {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-left: 4px;
+        margin-top: 4px;
+      }
+    }
+
+    .section-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 2px;
+
+      .subtitle {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .text {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}

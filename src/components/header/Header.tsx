@@ -68,9 +68,7 @@ function Header({}: IHeaderProps) {
               </li>
             </ul>
           </nav>
-          <div className="header-navigation-actions">
-            <ThemeSwitch />
-          </div>
+          <div className="header-navigation-actions">{/* <ThemeSwitch /> */}</div>
         </div>
       </Container>
     </header>
