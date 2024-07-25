@@ -4,7 +4,6 @@ import debounce from '@/functions/debounce'
 import { IHeaderProps } from './types'
 import Container from '../base/container'
 import Anchor from '../base/anchor'
-import ThemeSwitch from '../theme-switch'
 import Icon from '../base/icon'
 import Image from '../base/image'
 

@@ -1,0 +1,58 @@
+.welcome-hero {
+  position: relative;
+  height: 100vh;
+  max-height: 1080px;
+
+  .welcome-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 25, 35);
+    background: radial-gradient(
+      circle,
+      rgba(17, 25, 35, 0.8743872549019608) 0%,
+      rgba(17, 25, 35, 0.927608543417367) 20%,
+      rgba(17, 25, 35, 1) 100%
+    );
+  }
+
+  .bottom-polygons {
+    width: 100%;
+    height: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+      background-color: var(--gl-primary-v1);
+      height: 50px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%);
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      background-color: var(--gl-primary-v1);
+      height: 50px;
+    }
+  }
+}

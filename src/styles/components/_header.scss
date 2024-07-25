@@ -5,9 +5,10 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--gl-background);
+  color: var(--gl-text);
 
   &.scrolled {
+    background-color: var(--gl-body-v3);
     .header-top {
       height: 0;
       opacity: 0;
@@ -21,9 +22,13 @@ header {
   }
 
   .header-top {
-    padding: 6px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     transition: all 0.3s ease;
-    height: 34px;
+    height: 42px;
+    color: var(--gl-subtitle);
+    border-bottom: 1px solid var(--gl-border-v1);
 
     ul {
       display: flex;
@@ -31,8 +36,8 @@ header {
       align-items: center;
       column-gap: 24px;
       li {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 15px;
+        font-weight: 500;
       }
     }
   }

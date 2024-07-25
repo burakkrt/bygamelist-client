@@ -27,7 +27,7 @@ function Image({
     imageOptions.height = height
   } else {
     imageOptions.fill = true
-    imageOptions.sizes = '(max-width: 600px) 90vw, (max-width: 1200px) 50vw, 33vw'
+    imageOptions.sizes = '(max-width: 600px) 90vw, (max-width: 1200px) 50vw, 100vw'
   }
 
   if (priority) {
