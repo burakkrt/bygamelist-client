@@ -6,15 +6,12 @@ export interface IImageProps {
   className?: string
   priority?: boolean
   loading?: 'eager' | 'lazy'
+  objectFit?: 'contain' | 'cover'
 }
 
 export interface IImageOptions
-  extends Pick<
-    IImageProps,
-    'src' | 'alt' | 'width' | 'height' | 'priority' | 'loading'
-  > {
+  extends Pick<IImageProps, 'src' | 'alt' | 'width' | 'height' | 'priority' | 'loading'> {
   fill?: boolean
-  blurDataURL?: string
-  placeholder?: 'blur' | 'empty'
   sizes?: string
+  onLoad?: () => void
 }

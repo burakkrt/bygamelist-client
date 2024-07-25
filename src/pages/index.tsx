@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Container from '@/components/base/container'
 import Icon from '@/components/base/icon'
+import Image from '@/components/base/image'
 
 export default function Home() {
   return (
@@ -18,6 +19,14 @@ export default function Home() {
           <h3 style={{ fontSize: '28px', fontWeight: 400 }}>Metin2 Pvp Serverler</h3>
           <h4 style={{ fontSize: '22px', fontWeight: 300 }}>Metin2 Pvp Serverler</h4>
           <Icon name="icon-search" />
+          <Image
+            src="https://picsum.photos/id/21/200/300"
+            alt="test"
+            width={300}
+            height={400}
+            loading="lazy"
+            objectFit="cover"
+          />
           <div
             style={{
               display: 'grid',
@@ -26,62 +35,60 @@ export default function Home() {
               gap: '12px',
             }}
           >
-            {/* <Image
-                src="https://picsum.photos/id/11/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/21/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/31/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/41/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/51/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/61/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/71/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              />
-              <Image
-                src="https://picsum.photos/id/81/200/300"
-                alt="test"
-                width={200}
-                height={300}
-                loading="lazy"
-              /> */}
+            <Image
+              src="https://picsum.photos/id/11/200/300"
+              alt="test"
+              objectFit="cover"
+            />
+            <Image
+              src="https://picsum.photos/id/21/200/300"
+              alt="test"
+              width={200}
+              height={600}
+              objectFit="cover"
+            />
+            <Image
+              src="https://picsum.photos/id/31/200/300"
+              alt="test"
+              width={200}
+              height={300}
+              loading="lazy"
+            />
+            <Image
+              src="https://picsum.photos/id/41/200/300"
+              alt="test"
+              width={200}
+              height={300}
+              loading="lazy"
+            />
+            <Image
+              src="https://picsum.photos/id/51/200/300"
+              alt="test"
+              width={200}
+              height={300}
+              loading="lazy"
+            />
+            <Image
+              src="https://picsum.photos/id/61/200/300"
+              alt="test"
+              width={200}
+              height={300}
+              loading="lazy"
+            />
+            <Image
+              src="https://picsum.photos/id/71/200/300"
+              alt="test"
+              width={200}
+              height={300}
+              loading="lazy"
+            />
+            <Image
+              src="https://picsum.photos/id/81/200/300"
+              alt="test"
+              width={200}
+              height={300}
+              loading="lazy"
+            />
           </div>
           <p style={{ color: 'var(--gl-subtitle)' }}>
             1957'de Yeşil Sahne'de amatör olarak Ferdi Merter ve Erdinç Üstün'le birlikte

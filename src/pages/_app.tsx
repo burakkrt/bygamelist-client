@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import '../styles/main.scss'
+import 'react-loading-skeleton/dist/skeleton.css'
 import { Roboto, Barlow } from 'next/font/google'
 import Header from '@/components/header'
 
@@ -17,13 +18,11 @@ const fontBarlow = Barlow({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div className={`${fontRoboto.variable} ${fontBarlow.variable}`}>
       <Header />
-      {/* <main className={`${fontRoboto.variable} ${fontBarlow.variable}`}> */}
       <main>
         <Component {...pageProps} />
       </main>
-      {/* </main> */}
     </div>
   )
 }

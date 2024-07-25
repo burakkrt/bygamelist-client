@@ -1,6 +1,4 @@
-type DebounceFunction<T extends (...args: any[]) => any> = (
-  ...args: Parameters<T>
-) => void
+type DebounceFunction<T extends () => any> = (...args: Parameters<T>) => void
 
 const debounce = <T extends (...args: any[]) => void>(
   func: T,

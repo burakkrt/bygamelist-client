@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NextImage from 'next/image'
 import classNames from 'classnames'
+import Skeleton from 'react-loading-skeleton'
 import { IImageOptions, IImageProps } from './types'
 
 function Image({
@@ -11,11 +12,14 @@ function Image({
   width,
   className,
   priority = false,
+  objectFit = 'contain',
 }: IImageProps) {
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+
   const imageOptions: IImageOptions = {
     src,
     alt,
-    loading,
+    onLoad: () => setIsLoading(false),
   }
 
   if (width && height) {
@@ -23,7 +27,7 @@ function Image({
     imageOptions.height = height
   } else {
     imageOptions.fill = true
-    imageOptions.sizes = '(max-width: 600px) 90vw,(max-width: 1200px) 50vw, 33vw'
+    imageOptions.sizes = '(max-width: 600px) 90vw, (max-width: 1200px) 50vw, 33vw'
   }
 
   if (priority) {
@@ -31,8 +35,18 @@ function Image({
   }
 
   return (
-    <div className={classNames('image-node', className)}>
-      <NextImage {...imageOptions} />
+    <div
+      className={classNames(
+        'image-node',
+        { 'object-cover': objectFit === 'cover' },
+        { fill: imageOptions?.fill },
+        className
+      )}
+    >
+      {isLoading && loading === 'lazy' && (
+        <Skeleton count={1} className="image-loading-skeleton" />
+      )}
+      <NextImage {...imageOptions} className="next-image" />
     </div>
   )
 }
