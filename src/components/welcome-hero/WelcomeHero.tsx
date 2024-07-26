@@ -22,17 +22,17 @@ function WelcomeHero({}: IWelcomeHeroProps) {
         activeSeason: true,
         seasonOptions: [
           {
-            text: 'Metin2 sunucuları listesi',
+            text: 'Metin2 sunucuları eklenmesi.',
             isActive: true,
           },
           {
-            text: 'Metin2 yayıncıları listesi',
+            text: 'Metin2 yayıncıları eklenmesi.',
           },
           {
             text: 'İngilizce dil seçeneğinin eklenmesi.',
           },
           {
-            text: 'Kullanıcı izlenine göre altyapı çalışması.',
+            text: 'Optimizasyon çalışmaları.',
           },
         ],
       },
@@ -40,13 +40,13 @@ function WelcomeHero({}: IWelcomeHeroProps) {
         title: 'version 2',
         seasonOptions: [
           {
-            text: 'Battle Practice Mode',
+            text: 'Metin2 haftalık EP çekiliş sisteminin eklenmesi.',
           },
           {
-            text: 'iOS Open Beta',
+            text: 'Metin2 yayıncı içeriklerinin detaylandırılması.',
           },
           {
-            text: 'Land Creation & Building',
+            text: 'Optimizasyon çalışmaları.',
           },
         ],
       },
