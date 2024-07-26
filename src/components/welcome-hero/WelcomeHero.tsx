@@ -6,32 +6,38 @@ import { ISeasonsProps } from '../seasons/types'
 
 function WelcomeHero({}: IWelcomeHeroProps) {
   const seasonsValues: ISeasonsProps = {
-    title: 'a look into roadmaps seasons',
-    anchor: { href: 'https://google.com', children: 'Read More' },
-    image: { src: 'https://picsum.photos/900/500', alt: 'Seasons Image' },
+    title: 'Efsane doğuyor... ilk versiyon yayında !',
+    anchor: { href: 'https://google.com', children: 'daha fazla' },
+    image: {
+      src: '/images/update-seasons.png',
+      alt: 'Seasons Image',
+      objectFit: 'contain',
+      loading: 'eager',
+    },
     description:
-      'With Season 1 Ending with our play and Duis elementum sollicitudin is yaugue euismods Nulla ulla Player-focused updates games from Mobile App and Enjoy. With Season 1 Ending with our play and Duis elementum sollicitudin is yaugue euismods Nulla ulla Player-focused updates games from Mobile App and Enjoy.',
+      "Acaba ne oynasam diye düşünme, detaylı ve kullanışlı tasarımı ile sana uygun sunucuyu bul, vakit kaybetmeden geliş ! Anlık güncellemeler ile trendleri takip et. Hergün güncellenen içerikleri takip ederek rakiplerinden bir adım önde ol. ByGameList 'in ilk versiyonu şimdi yayında.",
     seasons: [
       {
         title: 'version 1',
         activeSeason: true,
         seasonOptions: [
           {
-            text: 'Battle Practice Mode',
+            text: 'Metin2 sunucuları listesi',
             isActive: true,
           },
           {
-            text: 'iOS Open Beta',
-            isActive: true,
+            text: 'Metin2 yayıncıları listesi',
           },
           {
-            text: 'Land Creation & Building',
+            text: 'İngilizce dil seçeneğinin eklenmesi.',
+          },
+          {
+            text: 'Kullanıcı izlenine göre altyapı çalışması.',
           },
         ],
       },
       {
         title: 'version 2',
-        activeSeason: true,
         seasonOptions: [
           {
             text: 'Battle Practice Mode',

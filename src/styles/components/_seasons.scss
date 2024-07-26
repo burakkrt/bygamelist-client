@@ -27,12 +27,29 @@
       }
 
       .seasons-anchor {
-        margin-bottom: 24px;
+        margin-bottom: 44px;
+        padding: 10px 42px;
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        border-left: 6px solid var(--gl-primary-v1);
+        border-top: 6px solid var(--gl-primary-v1);
+        border-radius: 4px 24px;
+        color: var(--gl-body-v4);
+        background-color: var(--gl-text);
+        box-shadow: 0 0 0 3px var(--gl-body-v4);
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          border-left: 6px solid var(--gl-primary-v2);
+          border-top: 6px solid var(--gl-primary-v2);
+        }
       }
 
       .seasons-image {
         width: 100%;
-        height: 300px;
+        height: 270px;
       }
     }
 

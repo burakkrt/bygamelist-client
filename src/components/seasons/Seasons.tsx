@@ -16,7 +16,7 @@ function Seasons({ title, description, image, anchor, seasons }: ISeasonsProps) 
             {anchor && <Anchor {...anchor} className="seasons-anchor" />}
             {image && (
               <div className="seasons-image">
-                <Image {...image} loading="lazy" objectFit="cover" />
+                <Image {...image} />
               </div>
             )}
           </div>
