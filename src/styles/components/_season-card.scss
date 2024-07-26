@@ -1,0 +1,66 @@
+.season-card {
+  position: relative;
+  padding: 42px;
+  width: 500px;
+  border-radius: 6px;
+  background-color: var(--gl-body-v4);
+
+  &.active-season {
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(-46px + 6px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 22px 0 22px 18px;
+      border-color: transparent transparent transparent var(--gl-primary-v2);
+    }
+  }
+
+  &-title {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  &-list {
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      column-gap: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      line-height: 20px;
+      margin: 16px 0;
+      color: var(--gl-subtitle-v1);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background-color: var(--gl-body-v4);
+        outline: 2px solid var(--gl-border-v1);
+      }
+
+      &.active {
+        &::before {
+          background-color: var(--gl-primary-v2);
+        }
+      }
+    }
+  }
+}

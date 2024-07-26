@@ -7,7 +7,7 @@
   height: 100%;
   pointer-events: none;
 
-  &-content {
+  &-in {
     z-index: -1;
     position: relative;
     width: 100%;
@@ -33,7 +33,7 @@
   }
 
   &.online {
-    .server-card-background-svg-content-state-color {
+    .server-card-background-svg-in-state-color {
       background-color: #45f882;
     }
   }

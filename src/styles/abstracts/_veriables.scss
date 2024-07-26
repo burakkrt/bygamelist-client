@@ -20,7 +20,7 @@ $themes: (
   light: (),
   dark: (
     gl-text: #ffffff,
-    gl-subtitle: #adb0bc,
+    gl-subtitle-v1: #adb0bc,
     gl-border-v1: rgba(255, 255, 255, 0.1),
     gl-body-v1: #0b0e13,
     gl-body-v2: #12171a,
@@ -29,5 +29,7 @@ $themes: (
     gl-body-v5: #1f2935,
 
     gl-primary-v1: #65b741,
+    gl-primary-v2: #45f882,
+    gl-primary-v3: #ffbe18,
   ),
 );

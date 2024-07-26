@@ -5,7 +5,7 @@ footer {
     background-color: var(--gl-body-v3);
     color: var(--gl-text);
 
-    &-content {
+    &-in {
       display: grid;
       grid-template-columns: 500px minmax(max-content, 255px) minmax(max-content, 255px);
       padding: 74px 0;
@@ -22,7 +22,7 @@ footer {
           font-weight: 400;
           line-height: 24px;
           max-width: 500px;
-          color: var(--gl-subtitle);
+          color: var(--gl-subtitle-v1);
           margin-top: 8px;
         }
       }
@@ -35,7 +35,7 @@ footer {
       }
 
       .list-links {
-        color: var(--gl-subtitle);
+        color: var(--gl-subtitle-v1);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -48,7 +48,7 @@ footer {
       background-color: var(--gl-body-v1);
       border-top: 1px solid var(--gl-border-v1);
 
-      &-content {
+      &-in {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -58,7 +58,7 @@ footer {
         .copyright {
           font-size: 14px;
           font-weight: 300;
-          color: var(--gl-subtitle);
+          color: var(--gl-subtitle-v1);
 
           strong {
             font-weight: 500;

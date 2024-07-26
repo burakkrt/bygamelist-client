@@ -1,0 +1,66 @@
+.seasons {
+  font-family: var(--font-barlow);
+
+  &-in {
+    display: flex;
+    flex-direction: row;
+    column-gap: 64px;
+
+    &-texts {
+      flex-grow: 1;
+
+      .title {
+        display: block;
+        font-size: 54px;
+        font-weight: 800;
+        line-height: 60px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      .description {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        color: var(--gl-subtitle-v1);
+        margin-bottom: 24px;
+      }
+
+      .seasons-anchor {
+        margin-bottom: 24px;
+      }
+
+      .seasons-image {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    &-cards {
+      flex-grow: 1;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 6px;
+        height: 100%;
+        background: -webkit-linear-gradient(
+          90deg,
+          transparent 0,
+          var(--gl-primary-v2) 100%
+        );
+        border-radius: 5px;
+      }
+
+      &-list {
+        margin-left: 46px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+      }
+    }
+  }
+}

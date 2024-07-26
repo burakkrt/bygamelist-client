@@ -9,7 +9,7 @@ function Footer({}: IFooterProps) {
     <footer>
       <div className="footer">
         <Container size="extended">
-          <div className="footer-content">
+          <div className="footer-in">
             <div className="bggamelist-info">
               <div className="bggamelist-info-logo">
                 <Image src="/images/bygamelist-logo.png" alt="ByGameList Logo" />
@@ -47,7 +47,7 @@ function Footer({}: IFooterProps) {
         </Container>
         <div className="footer-bottom">
           <Container size="extended">
-            <div className="footer-bottom-content">
+            <div className="footer-bottom-in">
               <span className="copyright">
                 Copyright © 2024 - Tüm Hakları <strong>ByGameList</strong> 'e aittir.
               </span>
