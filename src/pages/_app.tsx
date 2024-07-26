@@ -3,6 +3,7 @@ import '../styles/main.scss'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Roboto, Barlow } from 'next/font/google'
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 
 const fontRoboto = Roboto({
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main>
         <Component {...pageProps} />
       </main>
+      <Footer />
     </div>
   )
 }

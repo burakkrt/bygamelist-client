@@ -1,0 +1,71 @@
+footer {
+  font-family: var(--font-roboto);
+
+  .footer {
+    background-color: var(--gl-body-v3);
+    color: var(--gl-text);
+
+    &-content {
+      display: grid;
+      grid-template-columns: 500px minmax(max-content, 255px) minmax(max-content, 255px);
+      padding: 74px 0;
+      gap: 64px;
+
+      .bggamelist-info {
+        &-logo {
+          width: 164px;
+          height: 54px;
+        }
+
+        &-desc {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          max-width: 500px;
+          color: var(--gl-subtitle);
+          margin-top: 8px;
+        }
+      }
+
+      .list-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 54px;
+        text-transform: uppercase;
+      }
+
+      .list-links {
+        color: var(--gl-subtitle);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 8px;
+        margin-top: 6px;
+      }
+    }
+
+    &-bottom {
+      background-color: var(--gl-body-v1);
+      border-top: 1px solid var(--gl-border-v1);
+
+      &-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+
+        .copyright {
+          font-size: 14px;
+          font-weight: 300;
+          color: var(--gl-subtitle);
+
+          strong {
+            font-weight: 500;
+            color: var(--gl-primary-v1);
+          }
+        }
+      }
+    }
+  }
+}
