@@ -142,10 +142,15 @@ function Metin2ServerFilters({
           />
         </FormGroup>
         <div className="form-action-buttons">
-          <Button className="gl-form-button submit-button" type="submit">
+          <Button
+            variant="contained"
+            className="gl-form-button submit-button"
+            type="submit"
+          >
             Filtrele
           </Button>
           <Button
+            variant="contained"
             className="gl-form-button clear-button"
             onClick={() => handleChangeFilter('clear', '')}
           >

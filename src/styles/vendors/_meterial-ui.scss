@@ -148,15 +148,15 @@
 }
 
 .gl-form-button {
-  background-color: var(--gl-body-v5);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  color: var(--gl-subtitle-v1);
-  font-family: var(--gl-font-roboto);
+  background-color: var(--gl-body-v5) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.4px !important;
+  color: var(--gl-subtitle-v1) !important;
+  font-family: var(--gl-font-roboto) !important;
 
   &:hover {
-    background-color: var(--gl-body-v4);
+    background-color: var(--gl-body-v4) !important;
   }
 }
 
