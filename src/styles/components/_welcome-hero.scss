@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   max-height: 1080px;
-  padding-top: 156px;
+  padding-top: var(--gl-header-padding);
   padding-bottom: 70px;
 
   .welcome-bg-image {

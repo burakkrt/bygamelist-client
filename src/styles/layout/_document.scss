@@ -2,6 +2,7 @@
 
 :root {
   @include define-theme-variables(light);
+  --gl-header-padding: #{$header-padding};
 }
 
 [data-theme='dark'] {
@@ -10,5 +11,5 @@
 
 main {
   font-family: var(--font-roboto);
-  color: var(--gl-text);
+  color: var(--gl-text-v1);
 }

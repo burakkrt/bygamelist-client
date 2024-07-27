@@ -1,0 +1,19 @@
+.metin2-server-list-page {
+  padding-top: var(--gl-header-padding);
+  background-color: var(--gl-body-v3);
+  min-height: 100vh;
+
+  &-in {
+    display: grid;
+    grid-template-columns: 400px 1024px;
+    justify-content: center;
+    column-gap: 48px;
+
+    .filters {
+      border: 1px solid var(--gl-border-v1);
+    }
+
+    .server-list {
+    }
+  }
+}

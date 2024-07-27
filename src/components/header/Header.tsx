@@ -54,7 +54,7 @@ function Header({}: IHeaderProps) {
           <nav className="header-navigation-navigation">
             <ul>
               <li>
-                <Anchor href="/" className="nav-anchor-item">
+                <Anchor href="/servers" className="nav-anchor-item">
                   <Icon name="icon-sword" />
                   <span>Pvp Sunucuları</span>
                 </Anchor>
