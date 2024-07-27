@@ -9,6 +9,9 @@ function Metin2ServerListPage({}: IMetin2ServerListPageProps) {
   const initialMetin2ServerFilters: IMetin2ServerFilters = {
     search: '',
     serverTypes: [],
+    dateSort: 'news',
+    autoHunt: false,
+    legalSale: false,
   }
   const [filters, setFilters] = useState<IMetin2ServerFilters>(initialMetin2ServerFilters)
 
@@ -31,23 +34,25 @@ function Metin2ServerListPage({}: IMetin2ServerListPageProps) {
             quis porro provident, animi labore cupiditate sint. Inventore, tempore
             quibusdam.
           </div>
-          <div className="server-list">
-            <div className="server-list-filters">
+          <div className="servers">
+            <div className="servers-filters">
               <Metin2ServerFilters
                 filters={filters}
                 setFilters={setFilters}
                 handleFormSubmit={handleFormSubmit}
                 initialValue={initialMetin2ServerFilters}
               />
-              <div className="result-info">
-                <span className="text">Toplam 38 veriden 1-15 arası gösteriliyor.</span>
-              </div>
             </div>
-            <Metin2ServerCard />
-            <Metin2ServerCard />
-            <Metin2ServerCard />
-            <Metin2ServerCard />
-            <Metin2ServerCard />
+            <div className="result-info">
+              <span className="text">Toplam 38 veriden 1-15 arası gösteriliyor.</span>
+            </div>
+            <div className="servers-list">
+              <Metin2ServerCard />
+              <Metin2ServerCard />
+              <Metin2ServerCard />
+              <Metin2ServerCard />
+              <Metin2ServerCard />
+            </div>
           </div>
         </div>
       </Container>

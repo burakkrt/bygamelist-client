@@ -13,18 +13,26 @@
       border: 1px solid var(--gl-border-v1);
     }
 
-    .server-list {
-      &-filters {
-        .result-info {
-          text-align: end;
-          margin: 6px 0;
-          .text {
-            font-size: 15px;
-            line-height: 22px;
-            font-weight: 400;
-            color: var(--gl-subtitle-v1);
-          }
+    .servers {
+      .result-info {
+        text-align: end;
+        margin: 6px 0;
+        .text {
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: 400;
+          color: var(--gl-subtitle-v1);
         }
+      }
+
+      &-filters {
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 12px;
       }
     }
   }

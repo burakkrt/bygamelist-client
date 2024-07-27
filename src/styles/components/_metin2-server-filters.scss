@@ -3,6 +3,27 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     column-gap: 18px;
+
+    .form-action-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      height: 56px;
+
+      .submit-button {
+        width: 124px;
+        height: calc(56px / 2 - 2px);
+      }
+
+      .clear-button {
+        width: 124px;
+        height: calc(56px / 2 - 2px);
+      }
+    }
   }
 }

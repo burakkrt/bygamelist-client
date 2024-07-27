@@ -5,9 +5,14 @@ export type IServerTypes =
   | '55-120 Level'
   | '55-250 Level'
 
+export type IDateSort = 'news' | 'olds' | ''
+
 export interface IMetin2ServerFilters {
   search: string
   serverTypes: Array<IServerTypes>
+  dateSort: IDateSort
+  autoHunt: boolean
+  legalSale: boolean
 }
 
 export interface IMetin2ServerFiltersProps {
