@@ -9,11 +9,23 @@
     justify-content: center;
     column-gap: 48px;
 
-    .filters {
+    .slidebar {
       border: 1px solid var(--gl-border-v1);
     }
 
     .server-list {
+      &-filters {
+        .result-info {
+          text-align: end;
+          margin: 6px 0;
+          .text {
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 400;
+            color: var(--gl-subtitle-v1);
+          }
+        }
+      }
     }
   }
 }

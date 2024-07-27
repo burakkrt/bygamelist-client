@@ -1,0 +1,113 @@
+.gl-input-outline {
+  // label
+  .MuiFormLabel-root {
+    color: var(--gl-subtitle-v1);
+    font-size: 16px;
+
+    &.Mui-focused {
+      color: var(--gl-subtitle-v1);
+    }
+  }
+  // root
+  .MuiInputBase-root {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--gl-body-v5);
+
+    &.Mui-focused {
+      fieldset {
+        border-color: var(--gl-border-v1);
+      }
+    }
+
+    &:hover {
+      fieldset {
+        border-color: var(--gl-border-v1);
+      }
+    }
+    // input
+    .MuiInputBase-input {
+      color: var(--gl-text-v1);
+      letter-spacing: 0.4px;
+    }
+  }
+}
+
+.gl-multiselect-outline {
+  width: 260px;
+  height: 56px;
+
+  //label
+  .MuiFormLabel-root {
+    color: var(--gl-subtitle-v1);
+    font-size: 16px;
+  }
+  //root
+  .MuiInputBase-root {
+    height: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--gl-body-v5);
+
+    &.Mui-focused {
+      fieldset {
+        border-color: var(--gl-border-v1);
+      }
+    }
+
+    &:hover {
+      fieldset {
+        border-color: var(--gl-border-v1);
+      }
+    }
+    //input
+    .MuiInputBase-input {
+      color: var(--gl-text-v1);
+      letter-spacing: 0.4px;
+    }
+    // arrow down&up svg icon
+    .MuiSvgIcon-root {
+      color: var(--gl-subtitle-v1);
+      font-size: 24px;
+    }
+  }
+}
+
+/*  
+    ## select 'de açılan popup için className belirtmek gerekir.
+ const MenuProps: BaseSelectProps['MenuProps'] = {
+    PaperProps: {
+      ...
+      classes: {
+        root: 'gl-select-popup',
+      },
+    },
+  } 
+*/
+.gl-select-popup {
+  background-color: var(--gl-body-v5);
+  color: var(--gl-text-v1);
+  // li item
+  .MuiMenuItem-root {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    // checkbox
+    .MuiCheckbox-root {
+      padding: 0;
+      margin-right: 12px;
+      color: var(--gl-text-v1);
+      svg {
+        font-size: 20px;
+      }
+    }
+    // li item text
+    .MuiListItemText-root {
+      span {
+        font-size: 14px;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}
