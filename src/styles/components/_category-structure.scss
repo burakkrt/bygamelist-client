@@ -8,9 +8,10 @@
   $line-top-padding: calc(($title-height / 2) - ($line-thickness / 2));
   $line-color: var(--gl-primary-v3); // cizginin rengi
   position: relative;
-  margin-left: calc($line-width + 10px);
+  margin-left: calc($line-width + 4px);
   margin-top: 12px;
   margin-bottom: 12px;
+  width: fit-content;
 
   &::after {
     content: '';

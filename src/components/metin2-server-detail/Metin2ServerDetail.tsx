@@ -14,11 +14,13 @@ function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
         <div className="metin2-server-detail-in">
           <div className="server-detail-start">
             {data?.name && <h1 className="server-name">{data.name}</h1>}
+            {data?.subName && <h2 className="server-subname">{data.subName}</h2>}
+            <span className="name-hr" />
             {data?.level && <span className="server-level">{data.level}</span>}
-            {data?.level && <span className="server-type">{data.type}</span>}
+            {data?.type && <span className="server-type">{data.type}</span>}
             <div className="detail-section">
               <h3 className="detail-section-title">Açılış tarihi</h3>
-              <span className="detail-section-description">28 Temmuz 2024 Cuma </span>
+              <span className="detail-section-description">26 Temmuz 2024 - 21:00</span>
             </div>
             <div className="detail-section">
               <h3 className="detail-section-title">Temel Özellikler</h3>
@@ -27,19 +29,15 @@ function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
                 <span className="option-y">Evet</span>
               </span>
               <span className="detail-section-description multi-col">
-                <span>Oto Boss</span>
-                <span className="option-n">Hayır</span>
-              </span>
-              <span className="detail-section-description multi-col">
-                <span>Legal Satış</span>
-                <span className="option-y">Evet</span>
+                <span>Yayıncı Sayısı</span>
+                <span>+32</span>
               </span>
               <span className="detail-section-description multi-col">
                 <span>Drop</span>
                 <span>1 Client</span>
               </span>
               <span className="detail-section-description multi-col">
-                <span>Battlepass</span>
+                <span>Legal Satış</span>
                 <span className="option-y">Evet</span>
               </span>
               <span className="detail-section-description multi-col">
@@ -47,12 +45,24 @@ function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
                 <span className="option-y">Evet</span>
               </span>
               <span className="detail-section-description multi-col">
+                <span>Oto Boss</span>
+                <span className="option-n">Hayır</span>
+              </span>
+              <span className="detail-section-description multi-col">
+                <span>Battlepass</span>
+                <span className="option-y">Evet</span>
+              </span>
+              <span className="detail-section-description multi-col">
                 <span>Simya</span>
                 <span className="option-n">Hayır</span>
               </span>
               <span className="detail-section-description multi-col">
-                <span>Efsunlar</span>
-                <span>PVM, Farm Hasar</span>
+                <span>PVM Hasar Nesnesi</span>
+                <span className="option-y">Evet</span>
+              </span>
+              <span className="detail-section-description multi-col">
+                <span>Farm Hasar Nesnesi</span>
+                <span className="option-y">Evet</span>
               </span>
             </div>
           </div>
