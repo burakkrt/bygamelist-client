@@ -1,0 +1,82 @@
+{
+  "_id": "669b0272841c14e65bea6a6d",
+  "name": "Oliva2",
+  "type": "Orta Emek",
+  "level": "1-105",
+  "openingDate": "2024-07-26T21:00:00.000Z",
+  "autoHunt": false,
+  "autoBoss": false,
+  "battlepass": true,
+  "dropClient": 2,
+  "legalSale": true,
+  "team": {
+    "owners": ["Mert Cengiz"],
+    "comas": ["Cixcocuk97"],
+    "teamLeaders": ["Yunus Emre", "Phoenix"],
+    "gameAdmins": ["Mami"],
+    "gameMasters": ["Rowdy", "Heiwea"]
+  },
+  "dolunayKdp": false,
+  "simya": false,
+  "kuleFarm": true,
+  "efsunlar": [
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "PVM Hasar"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Farm Hasar"
+    }
+  ],
+  "bosses": [
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Lusifer"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Ork Lordu"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Azrail"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Mavi Ejderha"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Razadör"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Nemere"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Elit Kralice Örümcek"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Örümcek Barones"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Kırmızı Ejderha"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Beyaz Ejder"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Hidra"
+    },
+    {
+      "_id": "669b0272841c14e65bea6a6d",
+      "name": "Zodyak"
+    }
+  ]
+}

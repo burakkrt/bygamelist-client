@@ -1,0 +1,84 @@
+.category-structure {
+  $title-size: 20px; // kategori başlık font size
+  $title-height: calc($title-size + (($title-size * 20) / 100));
+  $list-item-size: 16px; // alt başlık font size
+  $list-item-height: calc($list-item-size + (($list-item-size * 20) / 100));
+  $line-width: 12px; // cizginin yatay uzunluğu
+  $line-thickness: 3px; // cizginin kalınlığı
+  $line-top-padding: calc(($title-height / 2) - ($line-thickness / 2));
+  $line-color: var(--gl-primary-v3); // cizginin rengi
+  position: relative;
+  margin-left: calc($line-width + 10px);
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: $line-top-padding;
+    left: calc(-#{$line-width} - 4px);
+    width: $line-thickness;
+    height: calc(
+      100% - (($title-height / 2) + ($list-item-height / 2) - $line-thickness)
+    );
+    background-color: $line-color;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &:last-child {
+    &::before {
+      border-top-left-radius: 4px;
+    }
+  }
+
+  .title {
+    position: relative;
+    font-size: $title-size;
+    line-height: $title-height;
+    font-weight: 600;
+    padding-left: 1px;
+    color: var(--gl-primary-v3);
+
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: $line-top-padding;
+      left: calc(-#{$line-width} - 4px);
+      width: $line-width;
+      height: $line-thickness;
+      background-color: $line-color;
+    }
+  }
+  .list-item {
+    position: relative;
+    font-size: $list-item-size;
+    line-height: $list-item-height;
+    padding-left: $line-width + 1px;
+    font-weight: 400;
+    margin: 8px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: calc(($list-item-height / 2) - ($line-thickness / 2));
+      left: calc(-#{$line-width} - 4px);
+      width: calc($line-width * 1.8);
+      height: $line-thickness - 1px;
+      background-color: $line-color;
+    }
+
+    &:last-child {
+      &::before {
+        border-bottom-left-radius: 4px;
+      }
+    }
+  }
+}

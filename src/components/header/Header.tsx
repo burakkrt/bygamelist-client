@@ -49,7 +49,11 @@ function Header({}: IHeaderProps) {
       <Container size="extended">
         <div className="header-navigation">
           <div className="header-navigation-logo">
-            <Image src="/images/bygamelist-logo.png" alt="ByGamelist logo" priority />
+            <Image
+              src="/images/site/bygamelist-logo.png"
+              alt="ByGamelist logo"
+              priority
+            />
           </div>
           <nav className="header-navigation-navigation">
             <ul>

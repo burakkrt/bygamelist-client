@@ -1,0 +1,28 @@
+.metin2-server-detail {
+  padding-top: var(--gl-header-padding);
+  background-color: var(--gl-body-v3);
+  min-height: 100vh;
+
+  &-in {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    column-gap: 24px;
+    border: 1px solid var(--gl-border-v1);
+
+    .server-detail-start {
+      .server-name {
+        font-size: 42px;
+        font-weight: 800;
+        font-family: var(--font-barlow);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 24px 0;
+      }
+    }
+
+    .server-detail-end {
+      .server-teams {
+      }
+    }
+  }
+}

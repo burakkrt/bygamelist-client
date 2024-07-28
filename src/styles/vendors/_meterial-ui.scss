@@ -1,121 +1,121 @@
 .gl-input-outline {
   // label
   .MuiInputLabel-root {
-    color: var(--gl-subtitle-v1);
-    font-size: 16px;
-    font-family: var(--font-roboto);
+    color: var(--gl-subtitle-v1) !important;
+    font-size: 16px !important;
+    font-family: var(--font-roboto) !important;
 
     &.Mui-focused {
-      color: var(--gl-subtitle-v1);
+      color: var(--gl-subtitle-v1) !important;
     }
   }
   // root
   .MuiInputBase-root {
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: var(--gl-body-v5);
+    font-family: inherit !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    background-color: var(--gl-body-v5) !important;
 
     &.Mui-focused {
       fieldset {
-        border-color: var(--gl-border-v1);
+        border-color: var(--gl-border-v1) !important;
       }
     }
 
     &:hover {
       fieldset {
-        border-color: var(--gl-border-v1);
+        border-color: var(--gl-border-v1) !important;
       }
     }
     // input
     .MuiInputBase-input {
-      color: var(--gl-text-v1);
-      letter-spacing: 0.4px;
+      color: var(--gl-text-v1) !important;
+      letter-spacing: 0.4px !important;
     }
   }
 }
 
 .gl-multiselect-outline {
-  width: 260px;
-  height: 56px;
+  width: 260px !important;
+  height: 56px !important;
 
   //label
   .MuiInputLabel-root {
-    color: var(--gl-subtitle-v1);
-    font-size: 16px;
-    font-family: var(--font-roboto);
+    color: var(--gl-subtitle-v1) !important;
+    font-size: 16px !important;
+    font-family: var(--font-roboto) !important;
   }
   //root
   .MuiInputBase-root {
-    height: 100%;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: var(--gl-body-v5);
+    height: 100% !important;
+    font-family: inherit !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    background-color: var(--gl-body-v5) !important;
 
     &.Mui-focused {
       fieldset {
-        border-color: var(--gl-border-v1);
+        border-color: var(--gl-border-v1) !important;
       }
     }
 
     &:hover {
       fieldset {
-        border-color: var(--gl-border-v1);
+        border-color: var(--gl-border-v1) !important;
       }
     }
     //input
     .MuiInputBase-input {
-      color: var(--gl-text-v1);
-      letter-spacing: 0.4px;
+      color: var(--gl-text-v1) !important;
+      letter-spacing: 0.4px !important;
     }
     // arrow down&up svg icon
     .MuiSvgIcon-root {
-      color: var(--gl-subtitle-v1);
-      font-size: 24px;
+      color: var(--gl-subtitle-v1) !important;
+      font-size: 24px !important;
     }
   }
 }
 
 .gl-select-outline {
-  width: 200px;
-  height: 56px;
+  width: 200px !important;
+  height: 56px !important;
 
   //label
   .MuiInputLabel-root {
-    color: var(--gl-subtitle-v1);
-    font-size: 16px;
-    font-family: var(--font-roboto);
+    color: var(--gl-subtitle-v1) !important;
+    font-size: 16px !important;
+    font-family: var(--font-roboto) !important;
   }
 
   //root
   .MuiInputBase-root {
-    height: 100%;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: var(--gl-body-v5);
+    height: 100% !important;
+    font-family: inherit !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    background-color: var(--gl-body-v5) !important;
 
     &.Mui-focused {
       fieldset {
-        border-color: var(--gl-border-v1);
+        border-color: var(--gl-border-v1) !important;
       }
     }
 
     &:hover {
       fieldset {
-        border-color: var(--gl-border-v1);
+        border-color: var(--gl-border-v1) !important;
       }
     }
     //input
     .MuiInputBase-input {
-      color: var(--gl-text-v1);
-      letter-spacing: 0.4px;
+      color: var(--gl-text-v1) !important;
+      letter-spacing: 0.4px !important;
     }
     // arrow down&up svg icon
     .MuiSvgIcon-root {
-      color: var(--gl-subtitle-v1);
-      font-size: 24px;
+      color: var(--gl-subtitle-v1) !important;
+      font-size: 24px !important;
     }
   }
 }
@@ -123,24 +123,24 @@
 .switch-group {
   // switch root
   .MuiFormControlLabel-root {
-    max-height: calc(56px / 2);
+    max-height: calc(56px / 2) !important;
     //label
     .MuiFormControlLabel-label {
-      font-size: 16px;
-      font-weight: 500;
-      font-family: var(--font-roboto);
-      user-select: none;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      font-family: var(--font-roboto) !important;
+      user-select: none !important;
     }
 
     // switch icon root
     .MuiSwitch-root {
       // switch button
       .MuiSwitch-switchBase {
-        color: var(--gl-subtitle-v1);
+        color: var(--gl-subtitle-v1) !important;
 
         // isChecked
         &.Mui-checked {
-          color: var(--gl-primary-v1);
+          color: var(--gl-primary-v1) !important;
         }
       }
     }
@@ -172,28 +172,28 @@
   } 
 */
 .gl-select-popup {
-  background-color: var(--gl-body-v5);
-  color: var(--gl-text-v1);
+  background-color: var(--gl-body-v5) !important;
+  color: var(--gl-text-v1) !important;
   // li item
   .MuiMenuItem-root {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 14px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    font-size: 14px !important;
 
     // checkbox
     .MuiCheckbox-root {
-      padding: 0;
-      margin-right: 12px;
-      color: var(--gl-text-v1);
+      padding: 0 !important;
+      margin-right: 12px !important;
+      color: var(--gl-text-v1) !important;
       svg {
-        font-size: 20px;
+        font-size: 20px !important;
       }
     }
     // li item text
     .MuiListItemText-root {
       span {
-        font-size: 14px;
-        letter-spacing: 0.4px;
+        font-size: 14px !important;
+        letter-spacing: 0.4px !important;
       }
     }
   }

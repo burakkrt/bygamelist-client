@@ -12,7 +12,7 @@ function Footer({}: IFooterProps) {
           <div className="footer-in">
             <div className="bggamelist-info">
               <div className="bggamelist-info-logo">
-                <Image src="/images/bygamelist-logo.png" alt="ByGameList Logo" />
+                <Image src="/images/site/bygamelist-logo.png" alt="ByGameList Logo" />
               </div>
               <p className="bggamelist-info-desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic in
@@ -52,7 +52,7 @@ function Footer({}: IFooterProps) {
                 Copyright © 2024 - Tüm Hakları <strong>ByGameList</strong> 'e aittir.
               </span>
               <Image
-                src="/images/ssl-256.png"
+                src="/images/site/ssl-256.png"
                 alt="ByGameList 256 Bit SSL Image"
                 width={56}
                 height={56}
