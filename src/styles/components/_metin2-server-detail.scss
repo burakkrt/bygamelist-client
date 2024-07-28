@@ -7,16 +7,91 @@
     display: grid;
     grid-template-columns: 300px 1fr 300px;
     column-gap: 24px;
-    border: 1px solid var(--gl-border-v1);
+    // border: 1px solid var(--gl-border-v1);
 
     .server-detail-start {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--gl-body-v4);
+      padding: 10px;
+
+      .detail-section {
+        background-color: var(--gl-body-v5);
+        border: 1px solid var(--gl-border-v1);
+        border-radius: 4px;
+        margin-bottom: 12px;
+
+        &-title {
+          font-size: 20px;
+          line-height: 34px;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          padding: 8px 18px;
+          color: var(--gl-subtitle-v1);
+          background-color: var(--gl-body-v1);
+        }
+
+        &-description {
+          display: block;
+          padding: 8px 18px;
+          color: var(--gl-subtitle-v1);
+
+          &:not(:last-child) {
+            border-bottom: 1px solid var(--gl-border-v1);
+          }
+
+          &.multi-col {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          span.option-y {
+            color: var(--gl-primary-v1);
+          }
+          span.option-n {
+            color: red;
+          }
+        }
+      }
+
       .server-name {
         font-size: 42px;
+        line-height: 46px;
         font-weight: 800;
         font-family: var(--font-barlow);
         text-transform: uppercase;
         text-align: center;
-        padding: 24px 0;
+        letter-spacing: 0.8px;
+        color: var(--gl-primary-v2);
+
+        &::after {
+          content: '';
+          display: block;
+          width: 32px;
+          height: 2px;
+          border-radius: 12px;
+          margin: 12px auto 12px auto;
+          background-color: var(--gl-subtitle-v1);
+        }
+      }
+
+      .server-level {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 900;
+        text-align: center;
+        color: var(--gl-subtitle-v1);
+      }
+
+      .server-type {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 700;
+        text-align: center;
+        color: var(--gl-subtitle-v1);
+        margin-bottom: 24px;
       }
     }
 
