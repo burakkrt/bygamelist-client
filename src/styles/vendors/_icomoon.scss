@@ -1,17 +1,18 @@
 $icomoon-font-family: 'bygamelist' !default;
 $icomoon-font-path: '/icomoon' !default;
 
+$icon-send: unquote('"\\e900"');
 $icon-chevron-right: unquote('"\\e901"');
 $icon-chevron-left: unquote('"\\e902"');
 $icon-chevron-down: unquote('"\\e907"');
 $icon-chevron-up: unquote('"\\e90a"');
-$icon-moon: unquote('"\\e900"');
+$icon-moon: unquote('"\\e903"');
 $icon-close: unquote('"\\e909"');
 $icon-checkmark: unquote('"\\e908"');
-$icon-sun: unquote('"\\e903"');
-$icon-twitch: unquote('"\\e904"');
-$icon-sword: unquote('"\\e905"');
-$icon-search: unquote('"\\e906"');
+$icon-sun: unquote('"\\e904"');
+$icon-twitch: unquote('"\\e905"');
+$icon-sword: unquote('"\\e906"');
+$icon-search: unquote('"\\e90b"');
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
@@ -40,6 +41,11 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-send {
+  &:before {
+    content: $icon-send;
+  }
+}
 .icon-chevron-right {
   &:before {
     content: $icon-chevron-right;

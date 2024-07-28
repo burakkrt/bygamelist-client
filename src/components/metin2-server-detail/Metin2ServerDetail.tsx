@@ -3,6 +3,8 @@ import teamStructureMapping from '@/mappers/teamStructureMapping'
 import Container from '@/components/base/container'
 import CategoryStructure from '@/components/category-structure'
 import Icon from '@/components/base/icon'
+import Image from '@/components/base/image'
+import Anchor from '@/components/base/anchor'
 import { IMetin2ServerDetailProps } from './types'
 
 import data from '../../../mock-data.json'
@@ -85,6 +87,18 @@ function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
           <div className="server-detail-end">
             <div className="server-teams">
               <CategoryStructure data={teamStructureMapping(data.team)} />
+            </div>
+            <div className="discord">
+              <div className="discord-image">
+                <Image src="/images/site/discord.png" alt="Discord Logo" loading="lazy" />
+              </div>
+              <div className="join">
+                <p className="join-text">Mithra2</p>
+                <Anchor href="https://google.com" target="_blank" className="join-anchor">
+                  Katıl
+                  <Icon name="icon-chevron-right" />
+                </Anchor>
+              </div>
             </div>
           </div>
         </div>

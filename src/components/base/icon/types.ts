@@ -10,6 +10,7 @@ export type IconTypes =
   | 'icon-chevron-down'
   | 'icon-chevron-left'
   | 'icon-chevron-right'
+  | 'icon-send'
 
 export interface IIconProps extends React.HTMLProps<HTMLElement> {
   name: IconTypes
