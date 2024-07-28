@@ -1,11 +1,13 @@
 import React from 'react'
-import { IMetin2ServerDetailProps } from './types'
+import teamStructureMapping from '@/mappers/teamStructureMapping'
 import Container from '../base/container'
 import data from '../../../mock-data.json'
 import CategoryStructure from '../category-structure'
+import { IMetin2ServerDetailProps } from './types'
 
 function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
   console.log(data)
+
   return (
     <div className="metin2-server-detail">
       <Container size="extended">
@@ -20,7 +22,7 @@ function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
           </div>
           <div className="server-detail-end">
             <div className="server-teams">
-              <CategoryStructure />
+              <CategoryStructure data={teamStructureMapping(data.team)} />
             </div>
           </div>
         </div>

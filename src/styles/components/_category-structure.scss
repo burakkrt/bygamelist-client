@@ -71,7 +71,7 @@
       top: calc(($list-item-height / 2) - ($line-thickness / 2));
       left: calc(-#{$line-width} - 4px);
       width: calc($line-width * 1.8);
-      height: $line-thickness - 1px;
+      height: $line-thickness;
       background-color: $line-color;
     }
 
