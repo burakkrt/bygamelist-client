@@ -1,12 +1,12 @@
 .category-structure {
-  $title-size: 20px; // kategori başlık font size
+  $title-size: 18px; // kategori başlık font size
   $title-height: calc($title-size + (($title-size * 20) / 100));
   $list-item-size: 16px; // alt başlık font size
   $list-item-height: calc($list-item-size + (($list-item-size * 20) / 100));
   $line-width: 12px; // cizginin yatay uzunluğu
-  $line-thickness: 3px; // cizginin kalınlığı
+  $line-thickness: 1px; // cizginin kalınlığı
   $line-top-padding: calc(($title-height / 2) - ($line-thickness / 2));
-  $line-color: var(--gl-primary-v3); // cizginin rengi
+  $line-color: var(--gl-red-v2); // cizginin rengi
   position: relative;
   margin-left: calc($line-width + 4px);
   margin-top: 12px;
@@ -23,9 +23,9 @@
     height: calc(
       100% - (($title-height / 2) + ($list-item-height / 2) - $line-thickness)
     );
-    background-color: $line-color;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    background-color: $line-color;
   }
 
   &:last-child {
@@ -36,9 +36,10 @@
 
   .title {
     position: relative;
+    font-family: var(--font-barlow);
     font-size: $title-size;
     line-height: $title-height;
-    font-weight: 600;
+    font-weight: 500;
     padding-left: 1px;
     color: var(--gl-primary-v3);
 
@@ -61,9 +62,10 @@
     position: relative;
     font-size: $list-item-size;
     line-height: $list-item-height;
-    padding-left: $line-width + 1px;
     font-weight: 400;
+    padding-left: $line-width + 1px;
     margin: 8px 0;
+    color: var(--gl-subtitle-v1);
 
     &::before {
       content: '';

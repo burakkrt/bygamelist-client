@@ -6,38 +6,37 @@
   &-in {
     display: grid;
     grid-template-columns: 300px 1fr 300px;
-    // border: 1px solid var(--gl-border-v1);
 
     .server-detail-start {
       display: flex;
       flex-direction: column;
       padding: 10px;
-      background-color: var(--gl-body-v5);
-      border: 1px solid var(--gl-border-v1);
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;
+      background-color: var(--gl-body-v5);
+      border: 1px solid var(--gl-border-v1);
 
       .detail-section {
+        border-radius: 6px;
+        margin-bottom: 12px;
         background-color: var(--gl-body-v4);
         border: 1px solid var(--gl-border-v1);
-        border-radius: 6px;
-
-        margin-bottom: 12px;
 
         &-title {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          column-gap: 4px;
           font-size: 16px;
           line-height: 34px;
           font-weight: 400;
           letter-spacing: 0.2px;
           padding: 8px 18px;
-          color: var(--gl-subtitle-v1);
-          background-color: var(--gl-body-v3);
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          column-gap: 4px;
           border-top-left-radius: 6px;
           border-top-right-radius: 6px;
+
+          color: var(--gl-subtitle-v1);
+          background-color: var(--gl-body-v3);
 
           .base-icon {
             font-size: 12px;
@@ -47,6 +46,7 @@
 
         &-description {
           display: block;
+          font-family: var(--font-barlow);
           font-size: 16px;
           font-weight: 400;
           padding: 8px 18px;
@@ -63,11 +63,11 @@
             justify-content: space-between;
           }
 
-          span.option-y {
+          span.text-true {
             color: var(--gl-primary-v1);
           }
-          span.option-n {
-            color: var(--gl-red-v2);
+          span.text-false {
+            color: var(--gl-red-v1);
           }
         }
       }
@@ -83,27 +83,6 @@
         color: var(--gl-primary-v2);
       }
 
-      .server-subname {
-        font-size: 42px;
-        line-height: 46px;
-        font-weight: 800;
-        font-family: var(--font-barlow);
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 0.8px;
-        color: var(--gl-primary-v2);
-      }
-
-      .name-hr {
-        display: block;
-        width: 48px;
-        height: 4px;
-        border-radius: 12px;
-        margin: 12px auto 12px auto;
-        background-color: var(--gl-subtitle-v1);
-        opacity: 0.5;
-      }
-
       .server-level {
         font-size: 26px;
         line-height: 36px;
@@ -117,27 +96,26 @@
         line-height: 26px;
         font-weight: 700;
         text-align: center;
-        color: var(--gl-subtitle-v1);
         margin-bottom: 24px;
+        color: var(--gl-subtitle-v1);
       }
     }
 
     .server-detail-middle {
-      background-color: var(--gl-body-v5);
+      padding: 10px;
+      background-color: var(--gl-body-v4);
       border-top: 1px solid var(--gl-border-v1);
       border-bottom: 1px solid var(--gl-border-v1);
-      padding: 10px;
     }
 
     .server-detail-end {
       display: flex;
       flex-direction: column;
-      background-color: var(--gl-body-v5);
-      border: 1px solid var(--gl-border-v1);
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
-
       padding: 10px;
+      background-color: var(--gl-body-v5);
+      border: 1px solid var(--gl-border-v1);
 
       .server-teams {
         .category-structure {
