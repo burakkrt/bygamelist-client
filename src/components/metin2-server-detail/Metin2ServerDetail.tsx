@@ -4,6 +4,7 @@ import Container from '../base/container'
 import data from '../../../mock-data.json'
 import CategoryStructure from '../category-structure'
 import { IMetin2ServerDetailProps } from './types'
+import Icon from '../base/icon'
 
 function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
   console.log(data)
@@ -19,11 +20,17 @@ function Metin2ServerDetail({}: IMetin2ServerDetailProps) {
             {data?.level && <span className="server-level">{data.level}</span>}
             {data?.type && <span className="server-type">{data.type}</span>}
             <div className="detail-section">
-              <h3 className="detail-section-title">Açılış tarihi</h3>
+              <h3 className="detail-section-title">
+                <Icon name="icon-chevron-right" />
+                Açılış tarihi
+              </h3>
               <span className="detail-section-description">26 Temmuz 2024 - 21:00</span>
             </div>
             <div className="detail-section">
-              <h3 className="detail-section-title">Temel Özellikler</h3>
+              <h3 className="detail-section-title">
+                <Icon name="icon-chevron-right" />
+                Temel Özellikler
+              </h3>
               <span className="detail-section-description multi-col">
                 <span>Oto Av</span>
                 <span className="option-y">Evet</span>

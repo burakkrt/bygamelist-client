@@ -1,11 +1,17 @@
 $icomoon-font-family: 'bygamelist' !default;
 $icomoon-font-path: '/icomoon' !default;
 
+$icon-chevron-right: unquote('"\\e901"');
+$icon-chevron-left: unquote('"\\e902"');
+$icon-chevron-down: unquote('"\\e907"');
+$icon-chevron-up: unquote('"\\e90a"');
 $icon-moon: unquote('"\\e900"');
-$icon-sun: unquote('"\\e901"');
-$icon-twitch: unquote('"\\e902"');
-$icon-sword: unquote('"\\e903"');
-$icon-search: unquote('"\\e904"');
+$icon-close: unquote('"\\e909"');
+$icon-checkmark: unquote('"\\e908"');
+$icon-sun: unquote('"\\e903"');
+$icon-twitch: unquote('"\\e904"');
+$icon-sword: unquote('"\\e905"');
+$icon-search: unquote('"\\e906"');
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
@@ -13,10 +19,8 @@ $icon-search: unquote('"\\e904"');
   src:
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?cq7an9#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?cq7an9')
-      format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?cq7an9')
-      format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?cq7an9') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?cq7an9') format('woff'),
     url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?cq7an9##{$icomoon-font-family}')
       format('svg');
   font-weight: normal;
@@ -36,9 +40,39 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-right {
+  &:before {
+    content: $icon-chevron-right;
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: $icon-chevron-left;
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content: $icon-chevron-down;
+  }
+}
+.icon-chevron-up {
+  &:before {
+    content: $icon-chevron-up;
+  }
+}
 .icon-moon {
   &:before {
     content: $icon-moon;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-checkmark {
+  &:before {
+    content: $icon-checkmark;
   }
 }
 .icon-sun {
