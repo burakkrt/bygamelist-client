@@ -1,17 +1,13 @@
 $icomoon-font-family: 'bygamelist' !default;
 $icomoon-font-path: '/icomoon' !default;
 
-$icon-send: unquote('"\\e900"');
-$icon-chevron-right: unquote('"\\e901"');
-$icon-chevron-left: unquote('"\\e902"');
+$icon-clear: unquote('"\\e900"');
+$icon-send: unquote('"\\e901"');
+$icon-chevron-right: unquote('"\\e902"');
+$icon-chevron-left: unquote('"\\e903"');
 $icon-chevron-down: unquote('"\\e907"');
 $icon-chevron-up: unquote('"\\e90a"');
-$icon-moon: unquote('"\\e903"');
-$icon-close: unquote('"\\e909"');
 $icon-checkmark: unquote('"\\e908"');
-$icon-sun: unquote('"\\e904"');
-$icon-twitch: unquote('"\\e905"');
-$icon-sword: unquote('"\\e906"');
 $icon-search: unquote('"\\e90b"');
 
 @font-face {
@@ -41,6 +37,11 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clear {
+  &:before {
+    content: $icon-clear;
+  }
+}
 .icon-send {
   &:before {
     content: $icon-send;
@@ -66,34 +67,9 @@ i {
     content: $icon-chevron-up;
   }
 }
-.icon-moon {
-  &:before {
-    content: $icon-moon;
-  }
-}
-.icon-close {
-  &:before {
-    content: $icon-close;
-  }
-}
 .icon-checkmark {
   &:before {
     content: $icon-checkmark;
-  }
-}
-.icon-sun {
-  &:before {
-    content: $icon-sun;
-  }
-}
-.icon-twitch {
-  &:before {
-    content: $icon-twitch;
-  }
-}
-.icon-sword {
-  &:before {
-    content: $icon-sword;
   }
 }
 .icon-search {

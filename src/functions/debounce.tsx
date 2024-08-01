@@ -1,6 +1,6 @@
-type DebounceFunction<T extends () => any> = (...args: Parameters<T>) => void
+type DebounceFunction<T extends () => any> = (...args: Parameters<T>) => void // eslint-disable-line
 
-const debounce = <T extends (...args: any[]) => void>(
+const debounce = <T extends (...args: any[]) => void>( // eslint-disable-line
   func: T,
   wait: number
 ): DebounceFunction<T> => {

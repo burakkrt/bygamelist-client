@@ -18,6 +18,6 @@ export interface IMetin2ServerFilters {
 export interface IMetin2ServerFiltersProps {
   filters: IMetin2ServerFilters
   setFilters: React.Dispatch<React.SetStateAction<IMetin2ServerFilters>>
-  handleFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+  handleFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void // eslint-disable-line
   initialValue: IMetin2ServerFilters
 }

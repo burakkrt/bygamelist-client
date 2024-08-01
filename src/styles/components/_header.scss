@@ -21,27 +21,6 @@ header {
     }
   }
 
-  .header-top {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: all 0.3s ease;
-    height: 42px;
-    color: var(--gl-subtitle-v1);
-    border-bottom: 1px solid var(--gl-border-v1);
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      column-gap: 24px;
-      li {
-        font-size: 15px;
-        font-weight: 500;
-      }
-    }
-  }
-
   .header-navigation {
     height: 94px;
     display: flex;
@@ -85,10 +64,6 @@ header {
             letter-spacing: 0.5px;
             text-transform: uppercase;
             padding: 8px 18px;
-
-            .base-icon {
-              font-size: 28px;
-            }
           }
         }
       }

@@ -1,12 +1,27 @@
 @use '../abstracts' as *;
 
 :root {
-  @include define-theme-variables(light);
-  --gl-header-padding: #{$header-padding};
-}
+  --gl-text-v1: #ffffff;
+  --gl-text-v2: #021526;
 
-[data-theme='dark'] {
-  @include define-theme-variables(dark);
+  --gl-subtitle-v1: #adb0bc;
+
+  --gl-border-v1: rgba(255, 255, 255, 0.1);
+
+  --gl-body-v1: #0b0e13;
+  --gl-body-v2: #12171a;
+  --gl-body-v3: #10181f;
+  --gl-body-v4: #182029;
+  --gl-body-v5: #1f2935;
+
+  --gl-primary-v1: #65b741;
+  --gl-primary-v2: #45f882;
+  --gl-primary-v3: #ffbe18;
+
+  --gl-red-v1: #c40c0c;
+  --gl-red-v2: #ee4e4e;
+
+  --gl-header-padding: #{$header-padding};
 }
 
 main {

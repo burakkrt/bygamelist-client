@@ -1,11 +1,7 @@
 export type IconTypes =
   | 'icon-search'
-  | 'icon-sword'
-  | 'icon-twitch'
-  | 'icon-sun'
-  | 'icon-moon'
   | 'icon-checkmark'
-  | 'icon-close'
+  | 'icon-clear'
   | 'icon-chevron-up'
   | 'icon-chevron-down'
   | 'icon-chevron-left'

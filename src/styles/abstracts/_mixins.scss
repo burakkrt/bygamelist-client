@@ -42,12 +42,3 @@
     @content;
   }
 }
-
-// Theme mappers
-@mixin define-theme-variables($theme-name) {
-  $theme: map-get($themes, $theme-name);
-
-  @each $key, $value in $theme {
-    --#{$key}: #{$value};
-  }
-}

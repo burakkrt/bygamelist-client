@@ -4,7 +4,6 @@ import debounce from '@/functions/debounce'
 import { IHeaderProps } from './types'
 import Container from '../base/container'
 import Anchor from '../base/anchor'
-import Icon from '../base/icon'
 import Image from '../base/image'
 
 function Header({}: IHeaderProps) {
@@ -32,21 +31,6 @@ function Header({}: IHeaderProps) {
   return (
     <header className={classNames(isSticky ? 'scrolled' : 'still')}>
       <Container size="extended">
-        <div className="header-top">
-          <ul>
-            <li>
-              <Anchor href="/">Anasayfa</Anchor>
-            </li>
-            <li>
-              <Anchor href="/">Hakkımızda</Anchor>
-            </li>
-            <li>
-              <Anchor href="/">İletişim</Anchor>
-            </li>
-          </ul>
-        </div>
-      </Container>
-      <Container size="extended">
         <div className="header-navigation">
           <div className="header-navigation-logo">
             <Image
@@ -59,19 +43,16 @@ function Header({}: IHeaderProps) {
             <ul>
               <li>
                 <Anchor href="/servers" className="nav-anchor-item">
-                  <Icon name="icon-sword" />
                   <span>Pvp Sunucuları</span>
                 </Anchor>
               </li>
               <li>
                 <Anchor href="/" className="nav-anchor-item">
-                  <Icon name="icon-twitch" />
                   <span>Yayıncılar</span>
                 </Anchor>
               </li>
             </ul>
           </nav>
-          <div className="header-navigation-actions">{/* <ThemeSwitch /> */}</div>
         </div>
       </Container>
     </header>
