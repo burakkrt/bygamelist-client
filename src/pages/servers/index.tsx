@@ -1,6 +1,6 @@
-import Metin2ServerListPage from '@/components/metin2-server-list-page'
+import Metin2ServerList from '@/components/metin2-server-list'
 import React from 'react'
 
 export default function ServersPage() {
-  return <Metin2ServerListPage />
+  return <Metin2ServerList />
 }

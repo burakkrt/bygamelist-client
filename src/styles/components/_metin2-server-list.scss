@@ -1,12 +1,12 @@
 .metin2-server-list {
-  padding: 148px 0;
-  background-color: var(--gl-body-v5);
+  padding-top: var(--gl-header-padding);
+  background-color: var(--gl-body-v3);
+  min-height: 100vh;
 
-  .servers {
-    width: fit-content;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
+  &-in {
+    display: grid;
+    grid-template-columns: 400px 1024px;
+    justify-content: center;
+    column-gap: 48px;
   }
 }

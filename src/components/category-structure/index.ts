@@ -1,1 +1,1 @@
-export { default } from './CategoryStructure';
+export { default } from './CategoryStructure'
