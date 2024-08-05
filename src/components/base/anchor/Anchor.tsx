@@ -9,12 +9,17 @@ function Anchor({
   replace = false,
   scroll = true,
   className,
+  title,
 }: IAnchorProps) {
   const anchorOptions: IAnchorOptions = {
     children,
     href,
     replace,
     scroll,
+  }
+
+  if (title) {
+    anchorOptions.title = title
   }
 
   if (className) {

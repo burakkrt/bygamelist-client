@@ -1,14 +1,22 @@
 $icomoon-font-family: 'bygamelist' !default;
 $icomoon-font-path: '/icomoon' !default;
 
-$icon-clear: unquote('"\\e900"');
-$icon-send: unquote('"\\e901"');
-$icon-chevron-right: unquote('"\\e902"');
-$icon-chevron-left: unquote('"\\e903"');
-$icon-chevron-down: unquote('"\\e907"');
-$icon-chevron-up: unquote('"\\e90a"');
-$icon-checkmark: unquote('"\\e908"');
-$icon-search: unquote('"\\e90b"');
+$icon-menu-right: unquote('"\\e900"');
+$icon-telegram: unquote('"\\e901"');
+$icon-x: unquote('"\\e902"');
+$icon-youtube: unquote('"\\e903"');
+$icon-instagram: unquote('"\\e904"');
+$icon-linkedin: unquote('"\\e905"');
+$icon-facebook: unquote('"\\e906"');
+$icon-discord: unquote('"\\e907"');
+$icon-clear: unquote('"\\e908"');
+$icon-send: unquote('"\\e909"');
+$icon-chevron-right: unquote('"\\e90a"');
+$icon-chevron-left: unquote('"\\e90b"');
+$icon-chevron-down: unquote('"\\e90c"');
+$icon-chevron-up: unquote('"\\e90d"');
+$icon-checkmark: unquote('"\\e90e"');
+$icon-search: unquote('"\\e90f"');
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
@@ -37,6 +45,46 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu-right {
+  &:before {
+    content: $icon-menu-right;
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram;
+  }
+}
+.icon-x {
+  &:before {
+    content: $icon-x;
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-discord {
+  &:before {
+    content: $icon-discord;
+  }
+}
 .icon-clear {
   &:before {
     content: $icon-clear;

@@ -1,62 +1,81 @@
 import React from 'react'
 import Container from '@/components/base/container'
+import Image from '@/components/base/image'
+import Anchor from '@/components/base/anchor'
+import Icon from '@/components/base/icon'
 import { IFooterProps } from './types'
-import Image from '../base/image'
-import Anchor from '../base/anchor'
 
 function Footer({}: IFooterProps) {
+  const hanleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <footer>
       <div className="footer">
-        <Container size="extended">
-          <div className="footer-in">
-            <div className="bggamelist-info">
-              <div className="bggamelist-info-logo">
-                <Image src="/images/site/bygamelist-logo.png" alt="ByGameList Logo" />
-              </div>
-              <p className="bggamelist-info-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic in
-                praesentium, ut amet nam architecto excepturi totam voluptatibus
-                distinctio voluptates odit. Placeat autem at dolorum incidunt non
-                voluptates a ut.
-              </p>
-            </div>
-            <div className="footer-pages">
-              <span className="list-title">Sayfalar</span>
-              <ul className="list-links">
-                <li>
-                  <Anchor href="/">Pvp Sunucuları</Anchor>
-                </li>
-                <li>
-                  <Anchor href="/">Yayıncılar</Anchor>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-pages">
-              <span className="list-title">Destek</span>
-              <ul className="list-links">
-                <li>
-                  <Anchor href="/">Hakkımızda</Anchor>
-                </li>
-                <li>
-                  <Anchor href="/">İletişim</Anchor>
-                </li>
-              </ul>
+        <Container size="fuild">
+          <div className="footer-top">
+            <Image
+              objectFit="cover"
+              src="/images/site/footer-bg.png"
+              alt="ByGameList footer image"
+              className="footer-bg"
+            />
+            <span className="title">
+              TOPLULUĞUMUZA KATILIN & ÇEKİLİŞLERDEN YARARLANIN
+            </span>
+            <span className="title-emo">🤙</span>
+
+            <Anchor href="/" target="_blank" className="join-discord">
+              <Icon name="icon-discord" />
+              <span>DISCORD 'A KATIL</span>
+            </Anchor>
+            <div className="socials">
+              <Anchor href="/" target="_blank" className="socials-item">
+                <Icon name="icon-instagram" />
+              </Anchor>
+              <Anchor href="/" target="_blank" className="socials-item">
+                <Icon name="icon-facebook" />
+              </Anchor>
+              <Anchor href="/" target="_blank" className="socials-item">
+                <Icon name="icon-x" />
+              </Anchor>
+              <Anchor href="/" target="_blank" className="socials-item">
+                <Icon name="icon-youtube" />
+              </Anchor>
             </div>
           </div>
         </Container>
         <div className="footer-bottom">
           <Container size="extended">
             <div className="footer-bottom-in">
-              <span className="copyright">
-                Copyright © 2024 - Tüm Hakları <strong>ByGameList</strong> 'e aittir.
-              </span>
-              <Image
-                src="/images/site/ssl-256.png"
-                alt="ByGameList 256 Bit SSL Image"
-                width={56}
-                height={56}
+              <div className="logo">
+                <Image
+                  src="/images/site/bygamelist-logo.png"
+                  alt="ByGameList logo"
+                  className="bygamelist-logo"
+                />
+                <span className="copyright">Copyright © 2024 ByGameList</span>
+              </div>
+              <Icon
+                name="icon-chevron-up"
+                className="page-up-icon"
+                onClick={hanleScrollToTop}
               />
+              <div className="footer-navigations">
+                <Anchor href="/" target="_blank" className="navigation-item">
+                  Anasayfa
+                </Anchor>
+                <Anchor href="/" target="_blank" className="navigation-item">
+                  Metin2 Pvp Serverler
+                </Anchor>
+                <Anchor href="/" target="_blank" className="navigation-item">
+                  Metin2 Yayıncıları
+                </Anchor>
+              </div>
             </div>
           </Container>
         </div>

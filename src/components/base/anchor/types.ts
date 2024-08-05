@@ -8,6 +8,7 @@ export interface IAnchorProps {
   target?: HTMLAttributeAnchorTarget | undefined
   replace?: boolean
   scroll?: boolean
+  title?: string
 }
 
 export interface IAnchorOptions extends IAnchorProps {}

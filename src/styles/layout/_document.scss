@@ -24,6 +24,10 @@
   --gl-header-padding: #{$header-padding};
 }
 
+body {
+  background-color: var(--gl-body-v3);
+}
+
 main {
   font-family: var(--font-roboto);
   color: var(--gl-text-v1);
