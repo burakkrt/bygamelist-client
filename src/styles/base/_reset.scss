@@ -136,3 +136,9 @@ button:-moz-focusring,
   -webkit-appearance: button;
   font: inherit;
 }
+
+button,
+a,
+i {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 footer {
   .footer {
     font-family: var(--font-roboto);
@@ -8,7 +10,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 48px 0;
+      padding: 48px 8px 48px 8px;
 
       .footer-bg {
         position: absolute;
@@ -76,7 +78,7 @@ footer {
             }
           }
           .base-icon {
-            font-size: 20px;
+            font-size: 22px;
             color: var(--gl-subtitle-v1);
             transition: all 150ms ease-in-out;
           }
@@ -140,6 +142,180 @@ footer {
 
             &:hover {
               color: var(--gl-text-v1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-lg) {
+    .footer {
+      &-bottom {
+        &-in {
+          .logo {
+            column-gap: 16px;
+            .bygamelist-logo {
+              width: 190px;
+            }
+          }
+          .page-up-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-md) {
+    .footer {
+      &-top {
+        .title {
+          font-size: 34px;
+        }
+      }
+      &-bottom {
+        &-in {
+          position: relative;
+          flex-direction: column;
+          row-gap: 24px;
+          .logo {
+            flex-direction: column;
+            row-gap: 4px;
+            .copyright {
+              display: inline-block;
+            }
+          }
+          .page-up-icon {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            right: 12px;
+            bottom: 36px;
+            font-size: 20px;
+            background-color: rgb(255, 255, 255, 0.1);
+          }
+
+          .footer-navigations {
+            column-gap: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-sm) {
+    .footer {
+      &-top {
+        .title {
+          max-width: 500px;
+          font-size: 28px;
+          line-height: 42px;
+        }
+        .title-emo {
+          font-size: 34px;
+        }
+        .join-discord {
+          column-gap: 8px;
+          padding: 12px 24px 10px 24px;
+        }
+        .socials {
+          flex-wrap: wrap;
+          gap: 16px;
+          &-item {
+            padding: 14px 14px 10px 14px;
+          }
+        }
+      }
+      &-bottom {
+        &-in {
+          .footer-navigations {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-xs) {
+    .footer {
+      &-top {
+        .title {
+          max-width: 500px;
+          font-size: 24px;
+          line-height: 36px;
+        }
+        .join-discord {
+          padding: 10px 20px 8px 20px;
+        }
+        .socials {
+          gap: 14px;
+          &-item {
+            .base-icon {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      &-bottom {
+        &-in {
+          .logo {
+            row-gap: 8px;
+            .bygamelist-logo {
+              width: 174px;
+            }
+          }
+
+          .footer-navigations {
+            flex-direction: column;
+            row-gap: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-es) {
+    .footer {
+      &-top {
+        .title {
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .join-discord {
+          font-size: 14px;
+          font-weight: 500;
+          .base-icon {
+            font-size: 18px;
+          }
+        }
+        .socials {
+          gap: 10px;
+          &-item {
+            .base-icon {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      &-bottom {
+        &-in {
+          .logo {
+            row-gap: 8px;
+            .bygamelist-logo {
+              width: 154px;
+            }
+            .copyright {
+              font-size: 14px;
+            }
+          }
+
+          .footer-navigations {
+            row-gap: 6px;
+            .navigation-item {
+              font-size: 14px;
             }
           }
         }

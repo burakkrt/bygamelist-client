@@ -42,3 +42,9 @@
     @content;
   }
 }
+
+@mixin media-query($breakpoint) {
+  @media screen and #{$breakpoint} {
+    @content;
+  }
+}
