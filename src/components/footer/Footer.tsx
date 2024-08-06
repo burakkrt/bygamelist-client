@@ -66,13 +66,13 @@ function Footer({}: IFooterProps) {
                 onClick={hanleScrollToTop}
               />
               <div className="footer-navigations">
-                <Anchor href="/" target="_blank" className="navigation-item">
+                <Anchor href="/" className="navigation-item">
                   Anasayfa
                 </Anchor>
-                <Anchor href="/" target="_blank" className="navigation-item">
+                <Anchor href="/" className="navigation-item">
                   Metin2 Pvp Serverler
                 </Anchor>
-                <Anchor href="/" target="_blank" className="navigation-item">
+                <Anchor href="/" className="navigation-item">
                   Metin2 Yayıncıları
                 </Anchor>
               </div>
