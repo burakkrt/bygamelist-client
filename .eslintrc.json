@@ -45,6 +45,8 @@
     // ...spread error kapat
     "react/jsx-props-no-spreading": "off",
     // Typescript any kullanım error kapat
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    // form ögelerine label ekleme zorunluluğu kapat
+    "jsx-a11y/control-has-associated-label": "off"
   }
 }

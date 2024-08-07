@@ -1,79 +1,73 @@
-header {
-  font-family: var(--font-barlow);
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   z-index: 1000;
+  padding: 16px 0;
+  min-height: 128px;
+  font-family: var(--font-poppins);
   color: var(--gl-text-v1);
+  transition: all 200ms ease-in-out;
 
   &.scrolled {
-    background-color: var(--gl-body-v4);
-    .header-top {
-      height: 0;
-      opacity: 0;
-      padding: 0;
-      pointer-events: none;
-    }
+    min-height: 68px;
+    background-color: var(--gl-body-v3);
 
-    .header-navigation {
-      height: 74px;
+    .header-in {
+      .logo {
+        width: 200px;
+        height: 56px;
+        margin: 0 15px;
+      }
     }
   }
 
-  .header-navigation {
-    height: 94px;
+  &-in {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 74px;
-    transition: all 0.3s ease;
+    justify-content: space-between;
+    column-gap: 84px;
 
-    &-logo {
-      width: 214px;
-      height: 64px;
+    .logo {
+      width: 230px;
+      height: 60px;
+      transition: all 200ms ease-in-out;
     }
 
-    &-navigation {
+    .navigation {
       flex-grow: 1;
-
       ul {
         display: flex;
         flex-direction: row;
         align-items: center;
-
+        column-gap: 4px;
         li {
-          &:first-child .nav-anchor-item {
-            padding-left: 0;
-          }
-
-          &:last-child .nav-anchor-item {
-            padding-right: 0;
-          }
-
-          .nav-anchor-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: nowrap;
-            text-wrap: nowrap;
-            column-gap: 4px;
+          .nav-anchor {
+            position: relative;
             font-size: 16px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            padding: 8px 18px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            padding: 8px 16px;
+            transition: all 200ms ease-in-out;
           }
         }
       }
     }
 
-    &-actions {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      column-gap: 12px;
+    .actions {
+      .menu-button {
+        padding: 8px 16px;
+        color: var(--gl-text-v1);
+
+        .base-icon {
+          font-size: 28px;
+        }
+      }
     }
   }
 }
