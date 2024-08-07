@@ -6,10 +6,15 @@ import Anchor from '@/components/base/anchor'
 import Image from '@/components/base/image'
 import Icon from '@/components/base/icon'
 import { IHeaderProps } from './types'
+import HeaderPanel from './header-panel'
 
 function Header({}: IHeaderProps) {
   const [isScrolled, setIsScrolled] = useState<boolean>(false)
   const [isPanel, setIsPanel] = useState<boolean>(false)
+
+  const hanleChancePanel = () => {
+    setIsPanel(!isPanel)
+  }
 
   useEffect(() => {
     const handleScroll = debounce(() => {
@@ -59,13 +64,19 @@ function Header({}: IHeaderProps) {
               </ul>
             </nav>
             <div className="actions">
-              <button type="button" className="menu-button">
+              <button type="button" className="menu-button" onClick={hanleChancePanel}>
                 <Icon name="icon-menu-right" />
               </button>
             </div>
           </div>
         </Container>
       </div>
+      <HeaderPanel isPanel={isPanel} setIsPanel={setIsPanel} />
+      <button
+        type="button"
+        className={classNames('panel-overlay', isPanel && 'panel-overlay-show')}
+        onClick={hanleChancePanel}
+      />
     </header>
   )
 }

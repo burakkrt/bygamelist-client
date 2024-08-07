@@ -71,3 +71,29 @@
     }
   }
 }
+
+header {
+  .panel-overlay {
+    cursor: cl;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0;
+    z-index: 1010;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 350ms ease-in-out;
+
+    &.panel-overlay-show {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: all;
+
+      cursor: url('/images/site/pointer-close.png'), auto;
+    }
+  }
+}
