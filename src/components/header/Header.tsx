@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import debounce from '@/functions/debounce'
 import Container from '@/components/base/container'
-import Anchor from '@/components/base/anchor'
 import Image from '@/components/base/image'
 import Icon from '@/components/base/icon'
 import HeaderPanel from '@/components/header/header-panel'
+import NavigationPages from '@/components/navigation-pages'
 import { IHeaderProps } from './types'
 
 function Header({}: IHeaderProps) {
@@ -44,25 +44,7 @@ function Header({}: IHeaderProps) {
                 priority
               />
             </div>
-            <nav className="navigation">
-              <ul>
-                <li>
-                  <Anchor href="/" className="nav-anchor">
-                    Anasayfa
-                  </Anchor>
-                </li>
-                <li>
-                  <Anchor href="/" className="nav-anchor">
-                    Metin2 PVP Serverleri
-                  </Anchor>
-                </li>
-                <li>
-                  <Anchor href="/" className="nav-anchor">
-                    Metin2 Yayıncıları
-                  </Anchor>
-                </li>
-              </ul>
-            </nav>
+            <NavigationPages pageType="mainPages" location="header" />
             <div className="actions">
               <button type="button" className="menu-button" onClick={hanleChancePanel}>
                 <Icon name="icon-menu-right" />

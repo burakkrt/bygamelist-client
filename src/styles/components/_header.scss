@@ -41,7 +41,7 @@
       transition: all 200ms ease-in-out;
     }
 
-    .navigation {
+    .nav-pages {
       flex-grow: 1;
       ul {
         display: flex;
@@ -77,7 +77,7 @@
     &-in {
       column-gap: 44px;
 
-      .navigation {
+      .nav-pages {
         ul {
           column-gap: 4px;
           li {
@@ -98,7 +98,7 @@
         width: 190px;
       }
 
-      .navigation {
+      .nav-pages {
         ul {
           column-gap: 4px;
           li {
@@ -113,7 +113,7 @@
 
   @include media-query($media-md) {
     &-in {
-      .navigation {
+      .nav-pages {
         display: none;
       }
     }
