@@ -22,7 +22,7 @@ function Footer({}: IFooterProps) {
           <div className="footer-top">
             <Image
               objectFit="cover"
-              src="/images/site/footer-bg.png"
+              src="/images/site/footer-bg.webp"
               alt="ByGameList footer image"
               className="footer-bg"
             />
