@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .header {
   position: fixed;
   top: 0;
@@ -70,6 +72,52 @@
       }
     }
   }
+
+  @include media-query($media-xl) {
+    &-in {
+      column-gap: 44px;
+
+      .navigation {
+        ul {
+          column-gap: 4px;
+          li {
+            .nav-anchor {
+              padding: 8px 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-lg) {
+    &-in {
+      column-gap: 24px;
+
+      .logo {
+        width: 190px;
+      }
+
+      .navigation {
+        ul {
+          column-gap: 4px;
+          li {
+            .nav-anchor {
+              padding: 8px 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($media-md) {
+    &-in {
+      .navigation {
+        display: none;
+      }
+    }
+  }
 }
 
 header {
@@ -94,6 +142,10 @@ header {
       pointer-events: all;
 
       cursor: url('/images/site/pointer-close.webp'), auto;
+    }
+
+    @include media-query($media-xs) {
+      display: none;
     }
   }
 }
