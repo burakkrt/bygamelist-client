@@ -1,0 +1,26 @@
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 16px;
+  margin: 8px 0;
+  &-item {
+    padding: 18px 18px 14px 18px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+
+      .base-icon {
+        color: var(--gl-text-v1);
+      }
+    }
+    .base-icon {
+      font-size: 22px;
+      color: var(--gl-subtitle-v1);
+      transition: all 150ms ease-in-out;
+    }
+  }
+}

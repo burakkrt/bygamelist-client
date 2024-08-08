@@ -5,8 +5,8 @@ import Container from '@/components/base/container'
 import Anchor from '@/components/base/anchor'
 import Image from '@/components/base/image'
 import Icon from '@/components/base/icon'
+import HeaderPanel from '@/components/header/header-panel'
 import { IHeaderProps } from './types'
-import HeaderPanel from './header-panel'
 
 function Header({}: IHeaderProps) {
   const [isScrolled, setIsScrolled] = useState<boolean>(false)

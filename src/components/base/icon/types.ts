@@ -16,6 +16,7 @@ export type IconTypes =
   | 'icon-facebook'
   | 'icon-discord'
   | 'icon-close'
+  | 'icon-document'
 
 export interface IIconProps extends React.HTMLProps<HTMLElement> {
   name: IconTypes

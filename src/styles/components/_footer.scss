@@ -35,54 +35,8 @@ footer {
         margin: 12px 0;
       }
 
-      .join-discord {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        column-gap: 12px;
-        font-size: 15px;
-        font-weight: 700;
-        padding: 14px 24px 12px 24px;
-        margin: 16px 0;
-        border-radius: 4px;
-        background-color: #5865f2;
-        transition: all 150ms ease-in-out;
-
-        &:hover {
-          background-color: #4251f5;
-        }
-
-        .base-icon {
-          font-size: 20px;
-        }
-      }
-
-      .socials {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 16px;
+      .social-media {
         margin: 24px 0;
-        &-item {
-          padding: 18px 18px 14px 18px;
-          backdrop-filter: blur(4px);
-          background-color: rgba(255, 255, 255, 0.1);
-          transition: all 150ms ease-in-out;
-
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-
-            .base-icon {
-              color: var(--gl-text-v1);
-            }
-          }
-          .base-icon {
-            font-size: 22px;
-            color: var(--gl-subtitle-v1);
-            transition: all 150ms ease-in-out;
-          }
-        }
       }
     }
 
@@ -219,7 +173,7 @@ footer {
           column-gap: 8px;
           padding: 12px 24px 10px 24px;
         }
-        .socials {
+        .social-media {
           flex-wrap: wrap;
           gap: 16px;
           &-item {
@@ -250,7 +204,7 @@ footer {
         .join-discord {
           padding: 10px 20px 8px 20px;
         }
-        .socials {
+        .social-media {
           gap: 14px;
           &-item {
             .base-icon {
@@ -291,7 +245,7 @@ footer {
             font-size: 18px;
           }
         }
-        .socials {
+        .social-media {
           gap: 10px;
           &-item {
             .base-icon {

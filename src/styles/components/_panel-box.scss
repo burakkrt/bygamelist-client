@@ -1,0 +1,31 @@
+.panel-box {
+  width: 100%;
+  border-radius: 4px;
+  margin: 24px 0;
+  color: var(--gl-text-v1);
+  background-color: var(--gl-body-v3);
+
+  .panel-box-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gl-border-v1);
+    color: var(--gl-text-v1);
+
+    .title-icon {
+      font-size: 12px;
+      margin: 8px 16px 8px 4px;
+    }
+
+    .title-text {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 600;
+    }
+  }
+
+  .panel-box-body {
+    padding: 12px 16px;
+  }
+}

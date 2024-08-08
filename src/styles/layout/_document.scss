@@ -26,6 +26,22 @@
 
 body {
   background-color: var(--gl-body-v3);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--gl-body-v3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--gl-body-v5);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--gl-primary-v2);
+  }
 }
 
 main {

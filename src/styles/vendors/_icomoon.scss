@@ -1,6 +1,7 @@
 $icomoon-font-family: 'bygamelist' !default;
 $icomoon-font-path: '/icomoon' !default;
 
+$icon-document: unquote('"\\e911"');
 $icon-close: unquote('"\\e900"');
 $icon-menu-right: unquote('"\\e901"');
 $icon-telegram: unquote('"\\e902"');
@@ -46,6 +47,11 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-document {
+  &:before {
+    content: $icon-document;
+  }
+}
 .icon-close {
   &:before {
     content: $icon-close;

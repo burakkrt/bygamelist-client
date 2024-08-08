@@ -47,6 +47,8 @@
     // Typescript any kullanım error kapat
     "@typescript-eslint/no-explicit-any": "off",
     // form ögelerine label ekleme zorunluluğu kapat
-    "jsx-a11y/control-has-associated-label": "off"
+    "jsx-a11y/control-has-associated-label": "off",
+    // useEffect için tüm bağımlılıkları tanımlama uyarısı kapat
+    "react-hooks/exhaustive-deps": "off"
   }
 }

@@ -3,6 +3,8 @@ import Container from '@/components/base/container'
 import Image from '@/components/base/image'
 import Anchor from '@/components/base/anchor'
 import Icon from '@/components/base/icon'
+import JoinDiscord from '@/components/join-discord'
+import SocialMedia from '@/components/social-media'
 import { IFooterProps } from './types'
 
 function Footer({}: IFooterProps) {
@@ -28,25 +30,8 @@ function Footer({}: IFooterProps) {
               TOPLULUĞUMUZA KATILIN & ÇEKİLİŞLERDEN YARARLANIN
             </span>
             <span className="title-emo">🤙</span>
-
-            <Anchor href="/" target="_blank" className="join-discord">
-              <Icon name="icon-discord" />
-              <span>DISCORD 'A KATIL</span>
-            </Anchor>
-            <div className="socials">
-              <Anchor href="/" target="_blank" className="socials-item">
-                <Icon name="icon-instagram" />
-              </Anchor>
-              <Anchor href="/" target="_blank" className="socials-item">
-                <Icon name="icon-facebook" />
-              </Anchor>
-              <Anchor href="/" target="_blank" className="socials-item">
-                <Icon name="icon-x" />
-              </Anchor>
-              <Anchor href="/" target="_blank" className="socials-item">
-                <Icon name="icon-youtube" />
-              </Anchor>
-            </div>
+            <JoinDiscord />
+            <SocialMedia />
           </div>
         </Container>
         <div className="footer-bottom">
