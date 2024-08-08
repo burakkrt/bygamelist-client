@@ -44,26 +44,28 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
       </div>
       <div className="panel-body">
         <PanelBox title="Diğer Sayfalar">
-          <ul className="other-pages-nav">
-            <li>
-              <Anchor className="nav-item" href="/">
-                <Icon name="icon-document" />
-                Hakkımızda
-              </Anchor>
-            </li>
-            <li>
-              <Anchor className="nav-item" href="/">
-                <Icon name="icon-document" />
-                Reklam ver
-              </Anchor>
-            </li>
-            <li>
-              <Anchor className="nav-item" href="/">
-                <Icon name="icon-document" />
-                İletişim
-              </Anchor>
-            </li>
-          </ul>
+          <nav>
+            <ul className="other-pages-nav">
+              <li>
+                <Anchor className="nav-item" href="/">
+                  <Icon name="icon-document" />
+                  Hakkımızda
+                </Anchor>
+              </li>
+              <li>
+                <Anchor className="nav-item" href="/">
+                  <Icon name="icon-document" />
+                  Reklam ver
+                </Anchor>
+              </li>
+              <li>
+                <Anchor className="nav-item" href="/">
+                  <Icon name="icon-document" />
+                  İletişim
+                </Anchor>
+              </li>
+            </ul>
+          </nav>
         </PanelBox>
         <PanelBox title="Topluluğumuza katılın">
           <SocialMedia />
