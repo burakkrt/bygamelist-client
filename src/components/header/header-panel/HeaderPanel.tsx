@@ -24,7 +24,7 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [router.events])
+  }, [router.events, isPanel, setIsPanel])
 
   const hanleClosePanel = () => {
     if (setIsPanel) {
