@@ -42,6 +42,10 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background: var(--gl-primary-v2);
   }
+
+  &.overflow-h {
+    overflow: hidden;
+  }
 }
 
 main {

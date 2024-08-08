@@ -13,15 +13,30 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
   const router = useRouter()
 
   useEffect(() => {
+    const handleResize = () => {
+      const bodyClassCheck = document.body.classList.contains('overflow-h')
+      if (isPanel && window.innerWidth <= 480 && !bodyClassCheck) {
+        document.body.classList.add('overflow-h')
+      } else if (!isPanel || window.innerWidth > 480) {
+        if (bodyClassCheck) {
+          document.body.classList.remove('overflow-h')
+        }
+      }
+    }
+
     const handleRouteChange = () => {
       if (isPanel) {
         setIsPanel(false)
       }
     }
 
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
     router.events.on('routeChangeComplete', handleRouteChange)
 
     return () => {
+      window.removeEventListener('resize', handleResize)
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events, isPanel, setIsPanel])
