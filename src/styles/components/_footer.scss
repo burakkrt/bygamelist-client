@@ -83,19 +83,21 @@ footer {
           }
         }
 
-        .footer-navigations {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          column-gap: 16px;
+        .nav-pages {
+          ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 16px;
 
-          .navigation-item {
-            font-size: 16px;
-            color: var(--gl-subtitle-v1);
-            transition: all 150ms ease-in-out;
+            .nav-anchor {
+              font-size: 16px;
+              color: var(--gl-subtitle-v1);
+              transition: all 150ms ease-in-out;
 
-            &:hover {
-              color: var(--gl-text-v1);
+              &:hover {
+                color: var(--gl-text-v1);
+              }
             }
           }
         }
@@ -150,8 +152,10 @@ footer {
             background-color: rgb(255, 255, 255, 0.1);
           }
 
-          .footer-navigations {
-            column-gap: 24px;
+          .nav-pages {
+            ul {
+              column-gap: 24px;
+            }
           }
         }
       }
@@ -183,10 +187,12 @@ footer {
       }
       &-bottom {
         &-in {
-          .footer-navigations {
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
+          .nav-pages {
+            ul {
+              gap: 12px;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
           }
         }
       }
@@ -222,9 +228,11 @@ footer {
             }
           }
 
-          .footer-navigations {
-            flex-direction: column;
-            row-gap: 8px;
+          .nav-pages {
+            ul {
+              flex-direction: column;
+              row-gap: 8px;
+            }
           }
         }
       }
@@ -266,10 +274,12 @@ footer {
             }
           }
 
-          .footer-navigations {
-            row-gap: 6px;
-            .navigation-item {
-              font-size: 14px;
+          .nav-pages {
+            ul {
+              row-gap: 6px;
+              .nav-anchor {
+                font-size: 14px;
+              }
             }
           }
         }

@@ -5,8 +5,8 @@ import Image from '@/components/base/image'
 import Icon from '@/components/base/icon/'
 import JoinDiscord from '@/components/join-discord'
 import PanelBox from '@/components/panel-box'
-import Anchor from '@/components/base/anchor'
 import SocialMedia from '@/components/social-media'
+import NavigationPages from '@/components/navigation-pages'
 import { IHeaderPanelProps } from './types'
 
 function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
@@ -59,28 +59,7 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
       </div>
       <div className="panel-body">
         <PanelBox title="Diğer Sayfalar">
-          <nav>
-            <ul className="other-pages-nav">
-              <li>
-                <Anchor className="nav-item" href="/">
-                  <Icon name="icon-document" />
-                  Hakkımızda
-                </Anchor>
-              </li>
-              <li>
-                <Anchor className="nav-item" href="/">
-                  <Icon name="icon-document" />
-                  Reklam ver
-                </Anchor>
-              </li>
-              <li>
-                <Anchor className="nav-item" href="/">
-                  <Icon name="icon-document" />
-                  İletişim
-                </Anchor>
-              </li>
-            </ul>
-          </nav>
+          <NavigationPages pageType="otherPages" location="panel" />
         </PanelBox>
         <PanelBox title="Topluluğumuza katılın">
           <SocialMedia />

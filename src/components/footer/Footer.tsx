@@ -1,10 +1,10 @@
 import React from 'react'
 import Container from '@/components/base/container'
 import Image from '@/components/base/image'
-import Anchor from '@/components/base/anchor'
 import Icon from '@/components/base/icon'
 import JoinDiscord from '@/components/join-discord'
 import SocialMedia from '@/components/social-media'
+import NavigationPages from '@/components/navigation-pages'
 import { IFooterProps } from './types'
 
 function Footer({}: IFooterProps) {
@@ -50,17 +50,7 @@ function Footer({}: IFooterProps) {
                 className="page-up-icon"
                 onClick={hanleScrollToTop}
               />
-              <div className="footer-navigations">
-                <Anchor href="/" className="navigation-item">
-                  Anasayfa
-                </Anchor>
-                <Anchor href="/" className="navigation-item">
-                  Metin2 Pvp Serverler
-                </Anchor>
-                <Anchor href="/" className="navigation-item">
-                  Metin2 Yayıncıları
-                </Anchor>
-              </div>
+              <NavigationPages pageType="mainPages" location="footer" />
             </div>
           </Container>
         </div>

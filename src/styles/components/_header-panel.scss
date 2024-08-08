@@ -56,15 +56,15 @@
   }
 
   .panel-body {
-    .other-pages-nav {
+    .nav-otherPages {
       li {
         &:not(:last-child) {
-          .nav-item {
+          .nav-anchor {
             border-bottom: 1px solid var(--gl-border-v1);
           }
         }
 
-        .nav-item {
+        .nav-anchor {
           display: flex;
           flex-direction: row;
           align-items: center;
