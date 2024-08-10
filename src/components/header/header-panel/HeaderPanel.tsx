@@ -51,12 +51,14 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
   return (
     <div className={classNames('header-panel', isPanel && 'panel-open')}>
       <div className="panel-header">
-        <div className="logo">
-          <Image src="/images/site/bygamelist-logo.png" alt="ByGameList logo" />
+        <div className="logo-and-close">
+          <div className="logo">
+            <Image src="/images/site/bygamelist-logo.png" alt="ByGameList logo" />
+          </div>
+          <button type="button" className="close-panel-btn" onClick={hanleClosePanel}>
+            <Icon name="icon-close" className="close" />
+          </button>
         </div>
-        <button type="button" className="close-panel-btn" onClick={hanleClosePanel}>
-          <Icon name="icon-close" className="close" />
-        </button>
       </div>
       <div className="panel-body">
         {useBreakpoint('md') && (
@@ -67,10 +69,12 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
         <PanelBox title="Diğer Sayfalar">
           <NavigationPages pageType="otherPages" location="panel" />
         </PanelBox>
-        <PanelBox title="Topluluğumuza katılın">
+      </div>
+      <div className="panel-footer">
+        <div className="socials">
           <SocialMedia />
           <JoinDiscord />
-        </PanelBox>
+        </div>
       </div>
     </div>
   )
