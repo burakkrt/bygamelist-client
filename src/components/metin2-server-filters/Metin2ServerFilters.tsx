@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import {
   BaseSelectProps,
   Box,
@@ -28,60 +28,79 @@ const initialFormValues: IMetin2ServerFilters = {
 
 function Metin2ServerFilters({}: IMetin2ServerFiltersProps) {
   const [filters, setFilters] = useState<IMetin2ServerFilters>(initialFormValues)
+  const [openServerType, setOpenServerType] = useState<boolean>(false)
+  const [openDatesort, setOpenDatesort] = useState<boolean>(false)
 
-  const serverTypeMenuProps: BaseSelectProps['MenuProps'] = {
-    PaperProps: {
-      classes: {
-        root: 'gl-select-popup',
+  const serverTypeMenuProps: BaseSelectProps['MenuProps'] = useMemo(
+    () => ({
+      disableScrollLock: true,
+      PaperProps: {
+        classes: {
+          root: 'gl-select-popup',
+        },
       },
-    },
-  }
+    }),
+    []
+  )
 
-  const serverTypeValues: Array<IServerTypes> = [
-    '1-99 Level',
-    '1-105 Level',
-    '1-120 Level',
-    '55-120 Level',
-    '55-250 Level',
-  ]
+  const serverTypeValues: Array<IServerTypes> = useMemo(
+    () => ['1-99 Level', '1-105 Level', '1-120 Level', '55-120 Level', '55-250 Level'],
+    []
+  )
+
+  const handleScroll = useCallback(() => {
+    if (openServerType || openDatesort) {
+      setOpenServerType(false)
+      setOpenDatesort(false)
+    }
+  }, [openServerType, openDatesort])
+
+  useEffect(() => {
+    if (openServerType || openDatesort) {
+      window.addEventListener('scroll', handleScroll)
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [openServerType, openDatesort, handleScroll])
 
   const handleFormSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
     console.log(filters)
   }
 
-  const handleChangeFilter = (key: keyof IMetin2ServerFilters | 'clear', value: any) => {
-    switch (key) {
-      case 'search':
-        setFilters((prev) => ({ ...prev, search: value }))
-        break
+  const handleChangeFilter = useCallback(
+    (key: keyof IMetin2ServerFilters | 'clear', value: any) => {
+      setFilters((prev) => {
+        switch (key) {
+          case 'search':
+            return { ...prev, search: value }
 
-      case 'serverTypes': {
-        const convertValue = typeof value === 'string' ? value.split(',') : value
-        setFilters((prev) => ({ ...prev, serverTypes: convertValue }))
-        break
-      }
+          case 'serverTypes': {
+            const convertValue = typeof value === 'string' ? value.split(',') : value
+            return { ...prev, serverTypes: convertValue }
+          }
 
-      case 'dateSort':
-        setFilters((prev) => ({ ...prev, dateSort: value }))
-        break
+          case 'dateSort':
+            return { ...prev, dateSort: value }
 
-      case 'autoHunt':
-        setFilters((prev) => ({ ...prev, autoHunt: value }))
-        break
+          case 'autoHunt':
+            return { ...prev, autoHunt: value }
 
-      case 'legalSale':
-        setFilters((prev) => ({ ...prev, legalSale: value }))
-        break
+          case 'legalSale':
+            return { ...prev, legalSale: value }
 
-      case 'clear':
-        setFilters(initialFormValues)
-        break
+          case 'clear':
+            return initialFormValues
 
-      default:
-        break
-    }
-  }
+          default:
+            return prev
+        }
+      })
+    },
+    []
+  )
 
   return (
     <div className="metin2-server-filters">
@@ -112,6 +131,9 @@ function Metin2ServerFilters({}: IMetin2ServerFiltersProps) {
             label="Sunucu Tipi"
             labelId="server-type-select"
             multiple
+            open={openServerType}
+            onOpen={() => setOpenServerType(true)}
+            onClose={() => setOpenServerType(false)}
             value={filters.serverTypes}
             onChange={(e) => handleChangeFilter('serverTypes', e.target.value)}
             renderValue={(selected) => selected.join(', ')}
@@ -129,9 +151,12 @@ function Metin2ServerFilters({}: IMetin2ServerFiltersProps) {
           <InputLabel id="server-datesort-select">Tarihe göre sırala</InputLabel>
           <Select
             labelId="server-datesort-select"
-            value={filters.dateSort}
             label="Tarihe göre sırala"
+            value={filters.dateSort}
             onChange={(e) => handleChangeFilter('dateSort', e.target.value)}
+            open={openDatesort}
+            onOpen={() => setOpenDatesort(true)}
+            onClose={() => setOpenDatesort(false)}
             MenuProps={serverTypeMenuProps}
           >
             <MenuItem value="asc">Önce en yeniler</MenuItem>
