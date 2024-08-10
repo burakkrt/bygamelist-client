@@ -7,6 +7,7 @@ import JoinDiscord from '@/components/join-discord'
 import PanelBox from '@/components/panel-box'
 import SocialMedia from '@/components/social-media'
 import NavigationPages from '@/components/navigation-pages'
+import useBreakpoint from '@/hooks/useBreakpoint'
 import { IHeaderPanelProps } from './types'
 
 function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
@@ -58,6 +59,11 @@ function HeaderPanel({ isPanel, setIsPanel }: IHeaderPanelProps) {
         </button>
       </div>
       <div className="panel-body">
+        {useBreakpoint('md') && (
+          <PanelBox title="Sayfalar">
+            <NavigationPages pageType="mainPages" location="panel" />
+          </PanelBox>
+        )}
         <PanelBox title="Diğer Sayfalar">
           <NavigationPages pageType="otherPages" location="panel" />
         </PanelBox>
