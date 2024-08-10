@@ -42,7 +42,7 @@ function NavigationPages({ pageType, location, className }: INavigationPagesProp
           ],
         },
         {
-          label: 'Reklam ver',
+          label: 'Tanıtım ve İşbirliği',
           href: '/',
           locations: ['panel'],
           icons: [
