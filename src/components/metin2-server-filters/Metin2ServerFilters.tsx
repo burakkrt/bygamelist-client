@@ -164,7 +164,7 @@ function Metin2ServerFilters({}: IMetin2ServerFiltersProps) {
             className="gl-form-button submit-button"
             type="submit"
           >
-            <Icon name="icon-document" />
+            <Icon name="icon-flash" />
             Filtrele
           </Button>
           <Button
