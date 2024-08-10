@@ -12,38 +12,29 @@ const breakpoints = {
   xxl: 1604,
 }
 
-const getBreakpoint = (width: number): IReturnBreakpoint => {
-  if (width) {
-    if (width < breakpoints.es) return 'es'
-    if (width < breakpoints.xs) return 'xs'
-    if (width < breakpoints.sm) return 'sm'
-    if (width < breakpoints.md) return 'md'
-    if (width < breakpoints.lg) return 'lg'
-    if (width < breakpoints.xl) return 'xl'
-    if (width < breakpoints.xxl) return 'xxl'
-    return undefined
+const getBreakpoint = (breakpoint: IReturnBreakpoint): boolean => {
+  if (typeof window !== 'undefined') {
+    return window.innerWidth < breakpoints[breakpoint]
   }
 
-  return undefined
+  return false
 }
-const useBreakpoint = (): IReturnBreakpoint => {
-  const [breakpoint, setBreakpoint] = useState<IReturnBreakpoint>(undefined)
+const useBreakpoint = (breakpoint: IReturnBreakpoint): boolean => {
+  const [isBreakpoint, setIsBreakpoint] = useState<boolean>(false)
 
   useEffect(() => {
-    setBreakpoint(getBreakpoint(window.innerWidth))
+    setIsBreakpoint(getBreakpoint(breakpoint))
 
     const handleResize = debounce(() => {
-      if (typeof window !== 'undefined') {
-        setBreakpoint(getBreakpoint(window.innerWidth))
-      }
+      setIsBreakpoint(getBreakpoint(breakpoint))
     }, 200)
 
     window.addEventListener('resize', handleResize)
 
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [breakpoint])
 
-  return breakpoint
+  return isBreakpoint
 }
 
 export default useBreakpoint
