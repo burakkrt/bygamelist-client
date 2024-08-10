@@ -56,6 +56,10 @@
           .base-icon {
             font-size: 18px;
           }
+
+          &:hover {
+            color: var(--gl-primary-v2);
+          }
         }
 
         &.clear-button {
@@ -68,6 +72,10 @@
 
           .base-icon {
             font-size: 20px;
+          }
+
+          &:hover {
+            color: var(--gl-red-v2);
           }
         }
       }
