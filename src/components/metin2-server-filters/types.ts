@@ -5,7 +5,7 @@ export type IServerTypes =
   | '55-120 Level'
   | '55-250 Level'
 
-export type IDateSort = 'news' | 'olds' | ''
+export type IDateSort = 'asc' | 'desc'
 
 export interface IMetin2ServerFilters {
   search: string
@@ -15,9 +15,4 @@ export interface IMetin2ServerFilters {
   legalSale: boolean
 }
 
-export interface IMetin2ServerFiltersProps {
-  filters: IMetin2ServerFilters
-  setFilters: React.Dispatch<React.SetStateAction<IMetin2ServerFilters>>
-  handleFormSubmit: (e: React.FormEvent<HTMLFormElement>) => void // eslint-disable-line
-  initialValue: IMetin2ServerFilters
-}
+export interface IMetin2ServerFiltersProps {}

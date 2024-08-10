@@ -1,14 +1,11 @@
 import React from 'react'
+import Metin2ServerList from '@/components/metin2-server-list'
 import { IWelcomeHeroProps } from './types'
 
 function WelcomeHero({}: IWelcomeHeroProps) {
   return (
     <div className="welcome-hero">
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias consequuntur
-        accusamus quam sequi qui placeat deleniti, necessitatibus ea cumque rem fuga,
-        animi maiores quibusdam ad corporis consequatur natus nostrum ab!
-      </p>
+      <Metin2ServerList />
     </div>
   )
 }

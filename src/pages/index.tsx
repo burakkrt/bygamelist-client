@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Metin2ServerList from '@/components/metin2-server-list'
 import WelcomeHero from '@/components/welcome-hero'
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <WelcomeHero />
-      <Metin2ServerList />
     </>
   )
 }

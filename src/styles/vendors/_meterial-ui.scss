@@ -1,199 +1,164 @@
-.gl-input-outline {
-  // label
-  .MuiInputLabel-root {
-    color: var(--gl-subtitle-v1) !important;
-    font-size: 16px !important;
-    font-family: var(--font-poppins) !important;
+.gl-input-filled {
+  background-color: var(--gl-body-v3);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
-    &.Mui-focused {
-      color: var(--gl-subtitle-v1) !important;
-    }
+  .MuiFormLabel-root {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    color: var(--gl-subtitle-v1);
   }
-  // root
-  .MuiInputBase-root {
-    font-family: inherit !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    background-color: var(--gl-body-v5) !important;
 
-    &.Mui-focused {
-      fieldset {
-        border-color: var(--gl-border-v1) !important;
+  .MuiInputBase-root {
+    .MuiInputBase-input {
+      font-family: var(--font-poppins);
+      font-size: 16px;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+      color: var(--gl-primary-v2);
+      min-height: auto;
+      height: 24px;
+    }
+
+    .MuiInputAdornment-root {
+      .base-icon {
+        font-size: 18px;
+        color: var(--gl-text-v1);
       }
     }
 
     &:hover {
-      fieldset {
-        border-color: var(--gl-border-v1) !important;
+      &::before {
+        border-bottom: 2px solid var(--gl-subtitle-v1);
       }
     }
-    // input
-    .MuiInputBase-input {
-      color: var(--gl-text-v1) !important;
-      letter-spacing: 0.4px !important;
+
+    &::before {
+      border-bottom: 2px solid var(--gl-subtitle-v1);
+    }
+
+    &::after {
+      border-bottom: 2px solid var(--gl-primary-v2);
     }
   }
 }
 
-.gl-multiselect-outline {
-  width: 260px !important;
-  height: 56px !important;
+.gl-multiselect-filled {
+  background-color: var(--gl-body-v3);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
-  //label
-  .MuiInputLabel-root {
-    color: var(--gl-subtitle-v1) !important;
-    font-size: 16px !important;
-    font-family: var(--font-poppins) !important;
+  &.server-type {
+    width: 100%;
+    max-width: 260px;
+    min-width: 240px;
   }
-  //root
-  .MuiInputBase-root {
-    height: 100% !important;
-    font-family: inherit !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    background-color: var(--gl-body-v5) !important;
 
-    &.Mui-focused {
-      fieldset {
-        border-color: var(--gl-border-v1) !important;
-      }
+  &.datesort {
+    width: 100%;
+    max-width: 210px;
+    min-width: 190px;
+  }
+
+  .MuiFormLabel-root {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    color: var(--gl-subtitle-v1);
+  }
+
+  .MuiInputBase-root {
+    .MuiSelect-select {
+      font-family: var(--font-poppins);
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.4px;
+      font-weight: 500;
+      color: var(--gl-primary-v2);
+      min-height: auto;
+      height: 24px;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 24px;
+      color: var(--gl-text-v1);
     }
 
     &:hover {
-      fieldset {
-        border-color: var(--gl-border-v1) !important;
-      }
-    }
-    //input
-    .MuiInputBase-input {
-      color: var(--gl-text-v1) !important;
-      letter-spacing: 0.4px !important;
-    }
-    // arrow down&up svg icon
-    .MuiSvgIcon-root {
-      color: var(--gl-subtitle-v1) !important;
-      font-size: 24px !important;
-    }
-  }
-}
-
-.gl-select-outline {
-  width: 200px !important;
-  height: 56px !important;
-
-  //label
-  .MuiInputLabel-root {
-    color: var(--gl-subtitle-v1) !important;
-    font-size: 16px !important;
-    font-family: var(--font-poppins) !important;
-  }
-
-  //root
-  .MuiInputBase-root {
-    height: 100% !important;
-    font-family: inherit !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    background-color: var(--gl-body-v5) !important;
-
-    &.Mui-focused {
-      fieldset {
-        border-color: var(--gl-border-v1) !important;
+      &::before {
+        border-bottom: 2px solid var(--gl-subtitle-v1);
       }
     }
 
-    &:hover {
-      fieldset {
-        border-color: var(--gl-border-v1) !important;
-      }
+    &::before {
+      border-bottom: 2px solid var(--gl-subtitle-v1);
     }
-    //input
-    .MuiInputBase-input {
-      color: var(--gl-text-v1) !important;
-      letter-spacing: 0.4px !important;
-    }
-    // arrow down&up svg icon
-    .MuiSvgIcon-root {
-      color: var(--gl-subtitle-v1) !important;
-      font-size: 24px !important;
+
+    &::after {
+      border-bottom: 2px solid var(--gl-primary-v2);
     }
   }
 }
 
 .switch-group {
-  // switch root
+  height: 57px;
+
   .MuiFormControlLabel-root {
-    max-height: calc(56px / 2) !important;
-    //label
-    .MuiFormControlLabel-label {
-      font-size: 16px !important;
-      font-weight: 500 !important;
-      font-family: var(--font-poppins) !important;
-      user-select: none !important;
-    }
+    margin-left: -6px;
+    margin-right: 12px;
+    height: calc(57px / 2);
 
-    // switch icon root
     .MuiSwitch-root {
-      // switch button
-      .MuiSwitch-switchBase {
-        color: var(--gl-subtitle-v1) !important;
-
-        // isChecked
+      .MuiButtonBase-root {
+        color: var(--gl-subtitle-v1);
         &.Mui-checked {
-          color: var(--gl-primary-v1) !important;
+          color: var(--gl-primary-v2);
+
+          + .MuiSwitch-track {
+            background-color: var(--gl-primary-v2);
+          }
         }
       }
-    }
-  }
-}
 
-.gl-form-button {
-  background-color: var(--gl-body-v5) !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.4px !important;
-  color: var(--gl-subtitle-v1) !important;
-  font-family: var(--gl-font-roboto) !important;
-
-  &:hover {
-    background-color: var(--gl-body-v4) !important;
-  }
-}
-
-/*  
-    ## select 'de açılan popup için className belirtmek gerekir.
- const MenuProps: BaseSelectProps['MenuProps'] = {
-    PaperProps: {
-      ...
-      classes: {
-        root: 'gl-select-popup',
-      },
-    },
-  } 
-*/
-.gl-select-popup {
-  background-color: var(--gl-body-v5) !important;
-  color: var(--gl-text-v1) !important;
-  // li item
-  .MuiMenuItem-root {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-    font-size: 14px !important;
-
-    // checkbox
-    .MuiCheckbox-root {
-      padding: 0 !important;
-      margin-right: 12px !important;
-      color: var(--gl-text-v1) !important;
-      svg {
-        font-size: 20px !important;
+      .MuiSwitch-track {
+        background-color: var(--gl-body-v1);
       }
     }
-    // li item text
-    .MuiListItemText-root {
-      span {
-        font-size: 14px !important;
-        letter-spacing: 0.4px !important;
+
+    .MuiTypography-root {
+      font-family: var(--font-poppins);
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-wrap: nowrap;
+    }
+  }
+}
+
+.gl-select-popup {
+  background-color: var(--gl-body-v5);
+  color: var(--gl-text-v1);
+
+  ul.MuiList-root {
+    li.MuiButtonBase-root {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      height: 42px;
+
+      .MuiCheckbox-root {
+        color: var(--gl-text-v1);
+        padding: 6px 10px 6px 0;
+        .MuiSvgIcon-root {
+          font-size: 20px;
+        }
+      }
+
+      .MuiListItemText-root {
+        .MuiTypography-root {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 500;
+        }
       }
     }
   }

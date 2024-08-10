@@ -1,1 +1,1 @@
-export { default } from './Metin2ServerList'
+export { default } from './Metin2ServerList';

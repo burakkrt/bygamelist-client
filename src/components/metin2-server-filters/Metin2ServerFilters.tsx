@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   BaseSelectProps,
   Box,
@@ -10,20 +10,25 @@ import {
   InputLabel,
   ListItemText,
   MenuItem,
-  OutlinedInput,
   Select,
   Switch,
   TextField,
+  InputAdornment,
 } from '@mui/material'
+import Icon from '@/components/base/icon'
 import { IMetin2ServerFilters, IMetin2ServerFiltersProps, IServerTypes } from './types'
 
-function Metin2ServerFilters({
-  filters,
-  setFilters,
-  handleFormSubmit,
-  initialValue,
-}: IMetin2ServerFiltersProps) {
-  const { search, serverTypes, dateSort, autoHunt, legalSale } = filters
+const initialFormValues: IMetin2ServerFilters = {
+  search: '',
+  serverTypes: [],
+  dateSort: 'asc',
+  autoHunt: false,
+  legalSale: false,
+}
+
+function Metin2ServerFilters({}: IMetin2ServerFiltersProps) {
+  const [filters, setFilters] = useState<IMetin2ServerFilters>(initialFormValues)
+
   const serverTypeMenuProps: BaseSelectProps['MenuProps'] = {
     PaperProps: {
       classes: {
@@ -39,6 +44,11 @@ function Metin2ServerFilters({
     '55-120 Level',
     '55-250 Level',
   ]
+
+  const handleFormSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+    console.log(filters)
+  }
 
   const handleChangeFilter = (key: keyof IMetin2ServerFilters | 'clear', value: any) => {
     switch (key) {
@@ -65,7 +75,7 @@ function Metin2ServerFilters({
         break
 
       case 'clear':
-        setFilters(initialValue)
+        setFilters(initialFormValues)
         break
 
       default:
@@ -77,48 +87,55 @@ function Metin2ServerFilters({
     <div className="metin2-server-filters">
       <Box
         component="form"
-        autoComplete="off"
         onSubmit={handleFormSubmit}
+        autoComplete="off"
         className="filters-form"
       >
         <TextField
           type="search"
           label="Sunucu ara"
-          variant="outlined"
-          className="gl-input-outline"
-          value={search}
+          variant="filled"
+          className="gl-input-filled search-server"
+          value={filters.search}
           onChange={(e) => handleChangeFilter('search', e.target.value)}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <Icon name="icon-search" />
+              </InputAdornment>
+            ),
+          }}
         />
-        <FormControl className="gl-multiselect-outline">
+        <FormControl variant="filled" className="gl-multiselect-filled server-type">
           <InputLabel id="server-type-select">Sunucu tipi</InputLabel>
           <Select
+            label="Sunucu Tipi"
             labelId="server-type-select"
             multiple
-            value={serverTypes}
+            value={filters.serverTypes}
             onChange={(e) => handleChangeFilter('serverTypes', e.target.value)}
-            input={<OutlinedInput label="Sunucu tipi" />}
             renderValue={(selected) => selected.join(', ')}
             MenuProps={serverTypeMenuProps}
           >
             {serverTypeValues.map((type) => (
-              <MenuItem key={type} value={type}>
-                <Checkbox checked={serverTypes.indexOf(type) > -1} />
+              <MenuItem key={type} value={type} className="menu-item">
+                <Checkbox checked={filters.serverTypes.indexOf(type) > -1} />
                 <ListItemText primary={type} />
               </MenuItem>
             ))}
           </Select>
         </FormControl>
-        <FormControl className="gl-select-outline">
+        <FormControl className="gl-multiselect-filled datesort" variant="filled">
           <InputLabel id="server-datesort-select">Tarihe göre sırala</InputLabel>
           <Select
             labelId="server-datesort-select"
-            value={dateSort}
+            value={filters.dateSort}
             label="Tarihe göre sırala"
             onChange={(e) => handleChangeFilter('dateSort', e.target.value)}
             MenuProps={serverTypeMenuProps}
           >
-            <MenuItem value="news">Önce en yeniler</MenuItem>
-            <MenuItem value="olds">Önce en eskiler</MenuItem>
+            <MenuItem value="asc">Önce en yeniler</MenuItem>
+            <MenuItem value="desc">Önce en eskiler</MenuItem>
           </Select>
         </FormControl>
         <FormGroup className="switch-group">
@@ -126,7 +143,7 @@ function Metin2ServerFilters({
             control={
               <Switch
                 onChange={(e) => handleChangeFilter('autoHunt', e.target.checked)}
-                checked={autoHunt}
+                checked={filters.autoHunt}
               />
             }
             label="Oto Av"
@@ -135,7 +152,7 @@ function Metin2ServerFilters({
             control={
               <Switch
                 onChange={(e) => handleChangeFilter('legalSale', e.target.checked)}
-                checked={legalSale}
+                checked={filters.legalSale}
               />
             }
             label="Legal Satış"
@@ -147,6 +164,7 @@ function Metin2ServerFilters({
             className="gl-form-button submit-button"
             type="submit"
           >
+            <Icon name="icon-document" />
             Filtrele
           </Button>
           <Button
@@ -154,7 +172,7 @@ function Metin2ServerFilters({
             className="gl-form-button clear-button"
             onClick={() => handleChangeFilter('clear', '')}
           >
-            Temizle
+            <Icon name="icon-clear" />
           </Button>
         </div>
       </Box>
