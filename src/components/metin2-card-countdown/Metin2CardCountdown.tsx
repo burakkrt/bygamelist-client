@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import moment, { Moment } from 'moment'
 import 'moment/locale/tr'
-
 import { IMetin2CardCountdownProps, ITimeLeft } from './types'
 
 const calculateTimeLeft = (targetDate: Moment, currentDateTime: Moment) => {
@@ -26,26 +25,28 @@ const calculateTimeLeft = (targetDate: Moment, currentDateTime: Moment) => {
 
 function Metin2CardCountdown({ openingDate }: IMetin2CardCountdownProps) {
   moment.locale('tr')
+
   const targetDate = useMemo(() => moment.utc(openingDate).local(true), [openingDate])
-  const [currentDateTime, setCurrentDateTime] = useState<Moment>(moment())
-  const [timeLeft, setTimeLeft] = useState<ITimeLeft>(
-    calculateTimeLeft(targetDate, currentDateTime)
-  )
+
+  const [currentDateTime, setCurrentDateTime] = useState<Moment | null>(null)
+  const [timeLeft, setTimeLeft] = useState<ITimeLeft | null>(null)
 
   useEffect(() => {
     const updateDateTime = () => {
-      setCurrentDateTime(moment())
+      const now = moment()
+      setCurrentDateTime(now)
+      setTimeLeft(calculateTimeLeft(targetDate, now))
     }
+
+    updateDateTime()
 
     const timer = setInterval(updateDateTime, 1000)
     return () => clearInterval(timer)
-  }, [])
+  }, [targetDate])
 
-  useEffect(() => {
-    if (!moment(currentDateTime).isAfter(targetDate)) {
-      setTimeLeft(calculateTimeLeft(targetDate, currentDateTime))
-    }
-  }, [currentDateTime, targetDate])
+  if (currentDateTime === null || timeLeft === null) {
+    return null
+  }
 
   const isOpen = moment(currentDateTime).isAfter(targetDate)
 
