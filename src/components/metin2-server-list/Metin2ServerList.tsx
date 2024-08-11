@@ -15,6 +15,13 @@ function Metin2ServerList({}: IMetin2ServerListProps) {
             <div className="servers-list">
               <Metin2ServerCard />
               <Metin2ServerCard />
+              <Metin2ServerCard />
+              <Metin2ServerCard />
+              <Metin2ServerCard isOpen />
+              <Metin2ServerCard isOpen />
+              <Metin2ServerCard isOpen />
+              <Metin2ServerCard isOpen />
+              <Metin2ServerCard isOpen />
               <Metin2ServerCard isOpen />
               <Metin2ServerCard isOpen />
             </div>

@@ -1,11 +1,32 @@
 .metin2-server-card {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   width: 100%;
   min-height: 115px;
   padding: 8px 16px;
   border-radius: 20px;
   border-bottom: 3px solid var(--gl-primary-v3);
-  background-color: var(--gl-body-v3);
+  background-color: var(--gl-body-v1);
+
+  .category {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--gl-subtitle-v1);
+    }
+    .content {
+      flex-grow: 1;
+      .text {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--gl-text-v1);
+      }
+    }
+  }
 
   &::before {
     content: '';

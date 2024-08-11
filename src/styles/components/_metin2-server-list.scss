@@ -10,7 +10,7 @@
 
     .servers {
       .metin2-server-filters {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
 
       &-list {
@@ -24,11 +24,11 @@
 
     .banner {
       &.banner-left {
-        border: 1px solid green;
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       &.banner-right {
-        border: 1px solid blue;
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
     }
   }
