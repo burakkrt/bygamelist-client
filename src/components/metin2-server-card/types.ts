@@ -1,3 +1,11 @@
 export interface IMetin2ServerCardProps {
-  isOpen?: boolean
+  id: string
+  name: string
+  subName: string
+  level: string
+  openingDate: string
+  autoHunt: boolean
+  dropClient: number
+  legalSale: boolean
+  team: { owners: Array<string> }
 }

@@ -1,0 +1,24 @@
+.metin2-card-countdown {
+  width: 100%;
+  height: 100%;
+
+  .is-opened {
+    display: flex;
+    flex-direction: column;
+    .category-title {
+      font-size: 16px;
+      color: var(--gl-subtitle-v1);
+    }
+
+    .diff-time {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--gl-text-v1);
+    }
+
+    .opening-time {
+      font-size: 16px;
+      color: var(--gl-subtitle-v1);
+    }
+  }
+}

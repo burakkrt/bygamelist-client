@@ -1,10 +1,11 @@
 .metin2-server-card {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 90px 130px 160px 96px 70px 100px 1fr;
+  gap: 12px;
   width: 100%;
   min-height: 115px;
-  padding: 8px 16px;
+  padding: 12px 24px;
   border-radius: 20px;
   border-bottom: 3px solid var(--gl-primary-v3);
   background-color: var(--gl-body-v1);
@@ -12,18 +13,40 @@
   .category {
     display: flex;
     flex-direction: column;
+    row-gap: 4px;
 
     .title {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--gl-subtitle-v1);
     }
     .content {
       flex-grow: 1;
       .text {
+        display: block;
         font-size: 20px;
+        line-height: 26px;
         font-weight: 500;
         color: var(--gl-text-v1);
+      }
+    }
+
+    &.auto-hunt {
+      text-align: center;
+      .base-icon {
+        font-size: 26px;
+      }
+    }
+
+    &.legal-sale {
+      text-align: center;
+      .base-icon {
+        font-size: 28px;
+        background: linear-gradient(90deg, #ffdc64 0%, #ffc850 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
       }
     }
   }
