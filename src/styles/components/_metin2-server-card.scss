@@ -35,18 +35,51 @@
       text-align: center;
       .base-icon {
         font-size: 26px;
+        opacity: 0.4;
+      }
+
+      &.active {
+        .base-icon {
+          background: linear-gradient(
+            90deg,
+            var(--gl-primary-v2) 0%,
+            var(--gl-primary-v3) 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+          opacity: 1;
+        }
       }
     }
 
     &.legal-sale {
       text-align: center;
+
       .base-icon {
         font-size: 28px;
-        background: linear-gradient(90deg, #ffdc64 0%, #ffc850 100%);
+        background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
+        opacity: 0.4;
+      }
+
+      &.active {
+        .base-icon {
+          background: linear-gradient(
+            90deg,
+            var(--gl-primary-v3) 0%,
+            var(--gl-primary-v1) 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+          opacity: 1;
+        }
       }
     }
   }

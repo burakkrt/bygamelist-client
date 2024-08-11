@@ -129,6 +129,58 @@
       "team": {
         "owners": ["Sadi Alkıran", "Gökhan Özütek"]
       }
+    },
+    {
+      "id": "669b0272841c14e65bea6a43",
+      "name": "Test1",
+      "subName": "",
+      "level": "1-99",
+      "openingDate": "2024-08-11T23:17:00.000Z",
+      "autoHunt": false,
+      "dropClient": 3,
+      "legalSale": true,
+      "team": {
+        "owners": ["Sadi Alkıran", "Gökhan Özütek"]
+      }
+    },
+    {
+      "id": "669b0272841c14e65bea6a55",
+      "name": "Test2",
+      "subName": "",
+      "level": "1-99",
+      "openingDate": "2024-08-11T23:18:00.000Z",
+      "autoHunt": false,
+      "dropClient": 3,
+      "legalSale": true,
+      "team": {
+        "owners": ["Sadi Alkıran", "Gökhan Özütek"]
+      }
+    },
+    {
+      "id": "669b0272841c14e65bea6a44",
+      "name": "Test3",
+      "subName": "",
+      "level": "1-99",
+      "openingDate": "2024-08-11T23:19:00.000Z",
+      "autoHunt": false,
+      "dropClient": 3,
+      "legalSale": true,
+      "team": {
+        "owners": ["Sadi Alkıran", "Gökhan Özütek"]
+      }
+    },
+    {
+      "id": "669b0272841c14e65bea6a12",
+      "name": "Test4",
+      "subName": "",
+      "level": "1-99",
+      "openingDate": "2024-08-11T23:20:00.000Z",
+      "autoHunt": false,
+      "dropClient": 3,
+      "legalSale": true,
+      "team": {
+        "owners": ["Sadi Alkıran", "Gökhan Özütek"]
+      }
     }
   ]
 }

@@ -55,16 +55,16 @@ function Metin2ServerCard({
           <span className="text">{dropClient} Client</span>
         </div>
       </div>
-      <div className="category auto-hunt">
+      <div className={classNames('category auto-hunt', autoHunt && 'active')}>
         <span className="title">Oto Av</span>
         <div className="content">
-          <Icon name="icon-sword" className={classNames(autoHunt && 'active')} />
+          <Icon name="icon-sword" />
         </div>
       </div>
-      <div className="category legal-sale">
+      <div className={classNames('category legal-sale', legalSale && 'active')}>
         <span className="title">Legal Satış</span>
         <div className="content">
-          <Icon name="icon-sell" className={classNames(legalSale && 'active')} />
+          <Icon name="icon-sell" />
         </div>
       </div>
       <div className="category date">
