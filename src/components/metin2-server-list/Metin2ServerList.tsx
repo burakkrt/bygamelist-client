@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '@/components/base/container'
 import Metin2ServerFilters from '@/components/metin2-server-filters'
+import Icon from '@/components/base/icon'
 import { IMetin2ServerListProps } from './types'
 
 function Metin2ServerList({}: IMetin2ServerListProps) {
@@ -12,11 +13,9 @@ function Metin2ServerList({}: IMetin2ServerListProps) {
           <div className="servers">
             <Metin2ServerFilters />
             <div className="servers-list">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a culpa
-                corporis, tempore maxime itaque modi qui ipsum aliquid consectetur eum
-                veniam quo earum fugit tenetur eveniet deserunt minima expedita?
-              </p>
+              <div className="metin2-server-card">
+                <p>lorem</p>
+              </div>
             </div>
           </div>
           <div className="banner banner-right" />

@@ -1,25 +1,27 @@
 $icomoon-font-family: 'bygamelist' !default;
 $icomoon-font-path: '/icomoon' !default;
 
-$icon-flash: unquote('"\\e900"');
+$icon-sell: unquote('"\\e900"');
+$icon-sword: unquote('"\\e901"');
+$icon-flash: unquote('"\\e902"');
 $icon-document: unquote('"\\e911"');
-$icon-close: unquote('"\\e901"');
-$icon-menu-right: unquote('"\\e902"');
-$icon-telegram: unquote('"\\e903"');
-$icon-x: unquote('"\\e904"');
-$icon-youtube: unquote('"\\e905"');
-$icon-instagram: unquote('"\\e906"');
-$icon-linkedin: unquote('"\\e907"');
-$icon-facebook: unquote('"\\e908"');
-$icon-discord: unquote('"\\e909"');
-$icon-clear: unquote('"\\e90a"');
-$icon-send: unquote('"\\e90b"');
-$icon-chevron-right: unquote('"\\e90c"');
-$icon-chevron-left: unquote('"\\e90d"');
-$icon-chevron-down: unquote('"\\e90e"');
-$icon-chevron-up: unquote('"\\e90f"');
-$icon-checkmark: unquote('"\\e910"');
-$icon-search: unquote('"\\e912"');
+$icon-close: unquote('"\\e903"');
+$icon-menu-right: unquote('"\\e904"');
+$icon-telegram: unquote('"\\e905"');
+$icon-x: unquote('"\\e906"');
+$icon-youtube: unquote('"\\e907"');
+$icon-instagram: unquote('"\\e908"');
+$icon-linkedin: unquote('"\\e909"');
+$icon-facebook: unquote('"\\e90a"');
+$icon-discord: unquote('"\\e90b"');
+$icon-clear: unquote('"\\e90c"');
+$icon-send: unquote('"\\e90d"');
+$icon-chevron-right: unquote('"\\e90e"');
+$icon-chevron-left: unquote('"\\e90f"');
+$icon-chevron-down: unquote('"\\e910"');
+$icon-chevron-up: unquote('"\\e912"');
+$icon-checkmark: unquote('"\\e913"');
+$icon-search: unquote('"\\e914"');
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
@@ -48,6 +50,16 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-sell {
+  &:before {
+    content: $icon-sell;
+  }
+}
+.icon-sword {
+  &:before {
+    content: $icon-sword;
+  }
+}
 .icon-flash {
   &:before {
     content: $icon-flash;

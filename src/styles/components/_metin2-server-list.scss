@@ -14,6 +14,60 @@
       }
 
       &-list {
+        .metin2-server-card {
+          position: relative;
+          width: 100%;
+          min-height: 115px;
+          box-sizing: border-box;
+          padding: 8px 16px;
+
+          background-color: var(--gl-body-v4);
+          border-radius: 20px;
+          border-bottom: 3px solid var(--gl-primary-v3);
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 3px;
+            background: radial-gradient(
+              circle at 10%,
+              rgba(255, 190, 24, 0.4) 0%,
+              rgba(251, 222, 147, 0.08) 100%
+            );
+            z-index: -1;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: -1px;
+            bottom: -3px;
+            width: 121px;
+            height: 24px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: var(--gl-primary-v3);
+          }
+
+          //    background: radial-gradient(
+          //   circle at 20%,
+          //   rgba(255, 208, 165, 0.1) 0%,
+          //   rgba(244, 231, 110, 0.1) 47%,
+          //   rgba(121, 142, 40, 0) 100%
+          // );
+          // border: 5px solid;
+          // border-image: radial-gradient(
+          //   circle at 100%,
+          //   rgba(255, 190, 24, 1) 0%,
+          //   rgba(251, 222, 147, 0.08) 100%
+          // );
+          // border-image-slice: 1;
+        }
       }
     }
 
