@@ -7,6 +7,15 @@ import { IMetin2CardCountdownProps, ITimeLeft } from './types'
 const calculateTimeLeft = (targetDate: Moment, currentDateTime: Moment) => {
   const duration = moment.duration(targetDate.diff(currentDateTime))
 
+  if (duration.asMilliseconds() <= 0) {
+    return {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    }
+  }
+
   return {
     days: Math.floor(duration.asDays()),
     hours: duration.hours(),
@@ -19,9 +28,6 @@ function Metin2CardCountdown({ openingDate }: IMetin2CardCountdownProps) {
   moment.locale('tr')
   const targetDate = moment.utc(openingDate).local(true)
   const [currentDateTime, setCurrentDateTime] = useState<Moment>(moment())
-  const [isOpen, setIsOpen] = useState<boolean>(
-    moment(currentDateTime).isAfter(targetDate)
-  )
   const [timeLeft, setTimeLeft] = useState<ITimeLeft>({
     days: 0,
     hours: 0,
@@ -35,27 +41,16 @@ function Metin2CardCountdown({ openingDate }: IMetin2CardCountdownProps) {
     }
 
     const timer = setInterval(updateDateTime, 1000)
-
     return () => clearInterval(timer)
   }, [])
 
-  useEffect(() => {
-    if (!isOpen) {
-      setIsOpen(moment(currentDateTime).isAfter(targetDate))
-    }
-  }, [currentDateTime, targetDate, isOpen])
+  const isOpen = moment(currentDateTime).isAfter(targetDate)
 
   useEffect(() => {
     if (!isOpen) {
       setTimeLeft(calculateTimeLeft(targetDate, currentDateTime))
     }
-  }, [currentDateTime])
-
-  useEffect(() => {
-    console.log(timeLeft)
-  }, [timeLeft])
-
-  // console.log(targetDate.format('YYYY-MM-DD HH:mm:ss'))
+  }, [currentDateTime, targetDate, isOpen])
 
   if (!isOpen) {
     return (
