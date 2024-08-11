@@ -1,7 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
-import moment from 'moment'
-import 'moment/locale/tr'
 import Icon from '@/components/base/icon'
 import Metin2CardCountdown from '@/components/metin2-card-countdown'
 import { IMetin2ServerCardProps } from './types'
@@ -16,16 +14,10 @@ function Metin2ServerCard({
   level,
   openingDate,
 }: IMetin2ServerCardProps) {
-  moment.locale('tr')
-  const targetDate = moment.utc(openingDate).local(true)
+  const [isOpened, setIsOpened] = useState<boolean>(false)
 
   return (
-    <div
-      className={classNames(
-        'metin2-server-card',
-        moment().isAfter(targetDate) && 'opened'
-      )}
-    >
+    <div className={classNames('metin2-server-card', isOpened && 'opened')}>
       <div className="category level">
         <span className="title">Level</span>
         <div className="content">
@@ -69,7 +61,7 @@ function Metin2ServerCard({
       </div>
       <div className="category date">
         <div className="content">
-          <Metin2CardCountdown openingDate={openingDate} />
+          <Metin2CardCountdown openingDate={openingDate} onStatusChange={setIsOpened} />
         </div>
       </div>
     </div>
