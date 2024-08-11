@@ -1,11 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
+import moment from 'moment'
+import 'moment/locale/tr'
 import Icon from '@/components/base/icon'
 import Metin2CardCountdown from '@/components/metin2-card-countdown'
 import { IMetin2ServerCardProps } from './types'
 
 function Metin2ServerCard({
-  id,
   name,
   subName,
   team,
@@ -15,23 +16,14 @@ function Metin2ServerCard({
   level,
   openingDate,
 }: IMetin2ServerCardProps) {
-  console.log({
-    id,
-    name,
-    subName,
-    team,
-    autoHunt,
-    dropClient,
-    legalSale,
-    level,
-    openingDate,
-  })
+  moment.locale('tr')
+  const targetDate = moment.utc(openingDate).local(true)
 
   return (
     <div
       className={classNames(
         'metin2-server-card',
-        new Date().toISOString() > openingDate && 'opened'
+        moment().isAfter(targetDate) && 'opened'
       )}
     >
       <div className="category level">
